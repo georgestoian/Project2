@@ -1,0 +1,933 @@
+E1131910:zone1 stoiang$ terraform apply
+data.aws_caller_identity.current: Reading...
+module.project_rds_p.aws_rds_cluster_parameter_group.cluster_pg: Refreshing state... [id=udacity-pg-p]
+module.vpc.aws_vpc.this: Refreshing state... [id=vpc-0682e35e2f25bc0dc]
+module.vpc.aws_eip.nat[0]: Refreshing state... [id=eipalloc-0ee38f7fbe4a09b34]
+data.aws_ami.amazon_linux_2: Reading...
+module.vpc_west.aws_vpc.this: Refreshing state... [id=vpc-050604a842317a128]
+module.vpc_west.aws_eip.nat[0]: Refreshing state... [id=eipalloc-08efd3e03f695db2d]
+module.project_rds_s.aws_rds_cluster_parameter_group.cluster_pg-s: Refreshing state... [id=udacity-pg-s]
+data.aws_caller_identity.current: Read complete after 0s [id=738782963780]
+data.aws_ami.amazon_linux_2: Read complete after 1s [id=ami-0e4bab9adfcf464b1]
+module.vpc.aws_internet_gateway.this[0]: Refreshing state... [id=igw-0d30fefbd0b3d1123]
+module.vpc.aws_route_table.private[2]: Refreshing state... [id=rtb-0d58100c3d6ff7129]
+module.vpc.aws_route_table.private[0]: Refreshing state... [id=rtb-00b102dd2512fb64c]
+module.vpc.aws_route_table.private[1]: Refreshing state... [id=rtb-0be3787ee679c244a]
+module.vpc.aws_route_table.public[0]: Refreshing state... [id=rtb-00fc5c36e3ac9826e]
+module.vpc.aws_subnet.public[0]: Refreshing state... [id=subnet-0e2308d299c5d55cc]
+module.vpc.aws_subnet.public[1]: Refreshing state... [id=subnet-01dcbd3487105703f]
+module.vpc.aws_subnet.public[2]: Refreshing state... [id=subnet-0025baab002596c34]
+module.vpc.aws_subnet.private[0]: Refreshing state... [id=subnet-04098ca40d038bc4a]
+module.vpc.aws_subnet.private[1]: Refreshing state... [id=subnet-0a8c6598f06216a55]
+module.vpc.aws_subnet.private[2]: Refreshing state... [id=subnet-0007d7583e646f231]
+module.project_ec2.aws_security_group.ec2_sg: Refreshing state... [id=sg-03a83555e13a8f5d1]
+module.project_rds_p.aws_security_group.db_sg_1: Refreshing state... [id=sg-0df9c28b1c208fe3a]
+module.project_alb.aws_lb_target_group.udacity: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-2:738782963780:targetgroup/udacity-lb-tg/6ae2213d40489dd3]
+module.vpc.aws_route.public_internet_gateway[0]: Refreshing state... [id=r-rtb-00fc5c36e3ac9826e1080289494]
+module.vpc.aws_route.public_internet_gateway[2]: Refreshing state... [id=r-rtb-00fc5c36e3ac9826e1080289494]
+module.vpc.aws_route.public_internet_gateway[1]: Refreshing state... [id=r-rtb-00fc5c36e3ac9826e1080289494]
+module.vpc.aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-03361115a3a8ea1e1]
+module.vpc.aws_nat_gateway.this[0]: Refreshing state... [id=nat-05b8923ba787edd3d]
+module.vpc.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-0fa1653caa97e5c01]
+module.vpc.aws_route_table_association.public[2]: Refreshing state... [id=rtbassoc-017e4f239e5a83d1c]
+module.vpc_west.aws_internet_gateway.this[0]: Refreshing state... [id=igw-060e565265673fc15]
+module.vpc_west.aws_route_table.public[0]: Refreshing state... [id=rtb-08bcf83d48ec53f0d]
+module.vpc_west.aws_route_table.private[1]: Refreshing state... [id=rtb-050bccfbbd4d8d1c8]
+module.vpc_west.aws_route_table.private[0]: Refreshing state... [id=rtb-0a16b42a91a411230]
+module.vpc_west.aws_subnet.private[0]: Refreshing state... [id=subnet-01571776c1d4753b8]
+module.vpc_west.aws_subnet.private[1]: Refreshing state... [id=subnet-0b3b8ed70bfc5f712]
+module.vpc_west.aws_subnet.public[0]: Refreshing state... [id=subnet-0b5643c0ab20758bd]
+module.vpc_west.aws_subnet.public[1]: Refreshing state... [id=subnet-0a292cd3db84e0500]
+module.project_ec2.aws_instance.ubuntu[1]: Refreshing state... [id=i-0ada39ab014d55745]
+module.project_ec2.aws_instance.ubuntu[0]: Refreshing state... [id=i-02f87690ac5046baa]
+module.project_ec2.aws_instance.ubuntu[2]: Refreshing state... [id=i-078badfab03e636a7]
+module.vpc.aws_route_table_association.private[1]: Refreshing state... [id=rtbassoc-0105291eb8bd6ea71]
+module.vpc.aws_route_table_association.private[2]: Refreshing state... [id=rtbassoc-03e9ebacea5f15d27]
+module.vpc.aws_route_table_association.private[0]: Refreshing state... [id=rtbassoc-075397375fe639b4a]
+module.vpc.aws_route.private_nat_gateway[2]: Refreshing state... [id=r-rtb-0d58100c3d6ff71291080289494]
+module.vpc.aws_route.private_nat_gateway[0]: Refreshing state... [id=r-rtb-00b102dd2512fb64c1080289494]
+module.vpc.aws_route.private_nat_gateway[1]: Refreshing state... [id=r-rtb-0be3787ee679c244a1080289494]
+module.vpc_west.aws_route.public_internet_gateway[0]: Refreshing state... [id=r-rtb-08bcf83d48ec53f0d1080289494]
+module.project_alb.aws_lb.udacity: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-2:738782963780:loadbalancer/app/udacity-lb-tf/90dad19a5fc3bb5a]
+module.vpc_west.aws_route.public_internet_gateway[1]: Refreshing state... [id=r-rtb-08bcf83d48ec53f0d1080289494]
+module.project_rds_s.aws_security_group.db_sg_2: Refreshing state... [id=sg-085bb3bc1d16769be]
+module.vpc_west.aws_route_table_association.private[0]: Refreshing state... [id=rtbassoc-0bcb71504703f1c61]
+module.vpc_west.aws_route_table_association.private[1]: Refreshing state... [id=rtbassoc-0fc2ac813708417f1]
+module.vpc_west.aws_nat_gateway.this[0]: Refreshing state... [id=nat-099da29c653085f31]
+module.vpc_west.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-0a043ec545cd7fe21]
+module.vpc_west.aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-03576b0abf5f8f8a1]
+module.project_rds_p.aws_db_subnet_group.udacity_db_subnet_group: Refreshing state... [id=udacity_db_subnet_group]
+module.project_rds_s.aws_db_subnet_group.udacity_db_subnet_group: Refreshing state... [id=udacity_db_subnet_group]
+module.project_eks.data.aws_iam_policy_document.eks_assume_role_policy: Reading...
+module.project_eks.data.aws_iam_policy_document.eks_assume_role_policy: Read complete after 0s [id=3552664922]
+module.project_eks.data.aws_iam_policy_document.eks_node_assume_role_policy: Reading...
+module.vpc_west.aws_route.private_nat_gateway[1]: Refreshing state... [id=r-rtb-050bccfbbd4d8d1c81080289494]
+module.project_eks.data.aws_iam_policy_document.eks_node_assume_role_policy: Read complete after 0s [id=2851119427]
+module.vpc_west.aws_route.private_nat_gateway[0]: Refreshing state... [id=r-rtb-0a16b42a91a4112301080289494]
+module.project_eks.aws_security_group.eks-cluster: Refreshing state... [id=sg-08385e360fc8afe97]
+module.project_eks.aws_iam_policy.eks_cluster_role_cloudwatch_policy: Refreshing state... [id=arn:aws:iam::738782963780:policy/app-udacity-eks-cluster-role-cloudwatch-policy]
+module.project_eks.aws_iam_policy.eks_node_instance_policy: Refreshing state... [id=arn:aws:iam::738782963780:policy/app-udacity-instance-policy]
+module.project_eks.aws_iam_role.eks_cluster_role: Refreshing state... [id=app-udacity-eks-cluster-role]
+module.project_eks.aws_iam_role.eks_node_cluster_role: Refreshing state... [id=app-udacity-eks-node-role]
+module.project_rds_p.aws_rds_cluster.udacity_cluster: Refreshing state... [id=udacity-db-cluster]
+module.project_alb.aws_lb_listener.udacity: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-2:738782963780:listener/app/udacity-lb-tf/90dad19a5fc3bb5a/8cf778a89bf897bd]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Refreshing state... [id=udacity-db-instance-0]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1]: Refreshing state... [id=udacity-db-instance-1]
+module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSServicePolicy: Refreshing state... [id=app-udacity-eks-cluster-role-2023120112470960240000000e]
+module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSClusterPolicy: Refreshing state... [id=app-udacity-eks-cluster-role-2023120112470966010000000f]
+module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSCloudwatchPolicy: Refreshing state... [id=app-udacity-eks-node-role-20231201124709222400000008]
+module.project_eks.aws_iam_role_policy_attachment.node_harmony_policy_attachment: Refreshing state... [id=app-udacity-eks-node-role-2023120112470924730000000a]
+module.project_eks.aws_iam_role_policy_attachment.node_AmazonEKSWorkerNodePolicy: Refreshing state... [id=app-udacity-eks-node-role-2023120112470941190000000c]
+module.project_eks.aws_iam_role_policy_attachment.node_AmazonEKS_CNI_Policy: Refreshing state... [id=app-udacity-eks-node-role-20231201124709236000000009]
+module.project_eks.aws_iam_role_policy_attachment.node_CloudWatchAgentServerPolicy: Refreshing state... [id=app-udacity-eks-node-role-2023120112470941910000000d]
+module.project_eks.aws_iam_role_policy_attachment.node_AmazonEC2ContainerRegistryReadOnly: Refreshing state... [id=app-udacity-eks-node-role-2023120112470927550000000b]
+module.project_eks.aws_eks_cluster.cluster: Refreshing state... [id=udacity-cluster]
+module.project_alb.aws_lb_target_group_attachment.udacity[2]: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-2:738782963780:targetgroup/udacity-lb-tg/6ae2213d40489dd3-20231201124534858200000006]
+module.project_alb.aws_lb_target_group_attachment.udacity[1]: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-2:738782963780:targetgroup/udacity-lb-tg/6ae2213d40489dd3-20231201124534541600000005]
+module.project_alb.aws_lb_target_group_attachment.udacity[0]: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-2:738782963780:targetgroup/udacity-lb-tg/6ae2213d40489dd3-20231201124535037300000007]
+data.aws_eks_cluster_auth.cluster: Reading...
+data.aws_eks_cluster.cluster: Reading...
+data.aws_eks_cluster_auth.cluster: Read complete after 0s [id=udacity-cluster]
+module.project_eks.aws_eks_node_group.node: Refreshing state... [id=udacity-cluster:app-udacity-node-group]
+data.aws_eks_cluster.cluster: Read complete after 0s [id=udacity-cluster]
+kubernetes_namespace.udacity: Refreshing state... [id=udacity]
+kubernetes_service.grafana-external: Refreshing state... [id=monitoring/grafana-external]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+-/+ destroy and then create replacement
+
+Terraform will perform the following actions:
+
+  # module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSCloudwatchPolicy will be created
+  + resource "aws_iam_role_policy_attachment" "cluster_AmazonEKSCloudwatchPolicy" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::738782963780:policy/app-udacity-eks-cluster-role-cloudwatch-policy"
+      + role       = "app-udacity-eks-node-role"
+    }
+
+  # module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSClusterPolicy will be created
+  + resource "aws_iam_role_policy_attachment" "cluster_AmazonEKSClusterPolicy" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
+      + role       = "app-udacity-eks-cluster-role"
+    }
+
+  # module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSServicePolicy will be created
+  + resource "aws_iam_role_policy_attachment" "cluster_AmazonEKSServicePolicy" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEKSServicePolicy"
+      + role       = "app-udacity-eks-cluster-role"
+    }
+
+  # module.project_eks.aws_iam_role_policy_attachment.node_AmazonEC2ContainerRegistryReadOnly will be created
+  + resource "aws_iam_role_policy_attachment" "node_AmazonEC2ContainerRegistryReadOnly" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
+      + role       = "app-udacity-eks-node-role"
+    }
+
+  # module.project_eks.aws_iam_role_policy_attachment.node_AmazonEKSWorkerNodePolicy will be created
+  + resource "aws_iam_role_policy_attachment" "node_AmazonEKSWorkerNodePolicy" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"
+      + role       = "app-udacity-eks-node-role"
+    }
+
+  # module.project_eks.aws_iam_role_policy_attachment.node_AmazonEKS_CNI_Policy will be created
+  + resource "aws_iam_role_policy_attachment" "node_AmazonEKS_CNI_Policy" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"
+      + role       = "app-udacity-eks-node-role"
+    }
+
+  # module.project_eks.aws_iam_role_policy_attachment.node_CloudWatchAgentServerPolicy will be created
+  + resource "aws_iam_role_policy_attachment" "node_CloudWatchAgentServerPolicy" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy"
+      + role       = "app-udacity-eks-node-role"
+    }
+
+  # module.project_eks.aws_iam_role_policy_attachment.node_harmony_policy_attachment will be created
+  + resource "aws_iam_role_policy_attachment" "node_harmony_policy_attachment" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::738782963780:policy/app-udacity-instance-policy"
+      + role       = "app-udacity-eks-node-role"
+    }
+
+  # module.project_rds_p.aws_rds_cluster.udacity_cluster must be replaced
+-/+ resource "aws_rds_cluster" "udacity_cluster" {
+      ~ allocated_storage                   = 1 -> (known after apply)
+      + apply_immediately                   = (known after apply)
+      ~ arn                                 = "arn:aws:rds:us-east-2:738782963780:cluster:udacity-db-cluster" -> (known after apply)
+      ~ availability_zones                  = [ # forces replacement
+          - "us-east-2c",
+            # (2 unchanged elements hidden)
+        ]
+      - backtrack_window                    = 0 -> null
+      + cluster_identifier_prefix           = (known after apply)
+      ~ cluster_members                     = [
+          - "udacity-db-instance-0",
+          - "udacity-db-instance-1",
+        ] -> (known after apply)
+      ~ cluster_resource_id                 = "cluster-VIVZSX4S5BME6VWTGXNLWEJJDA" -> (known after apply)
+      + db_system_id                        = (known after apply)
+      - deletion_protection                 = false -> null
+      - enabled_cloudwatch_logs_exports     = [] -> null
+      ~ endpoint                            = "udacity-db-cluster.cluster-ceilbe2ir4u7.us-east-2.rds.amazonaws.com" -> (known after apply)
+      ~ engine_version_actual               = "5.7.mysql_aurora.2.07.10" -> (known after apply)
+      ~ hosted_zone_id                      = "Z2XHWR1WZ565X2" -> (known after apply)
+      - iam_database_authentication_enabled = false -> null
+      ~ iam_roles                           = [] -> (known after apply)
+      ~ id                                  = "udacity-db-cluster" -> (known after apply)
+      - iops                                = 0 -> null
+      + kms_key_id                          = (known after apply)
+      ~ master_user_secret                  = [] -> (known after apply)
+      + master_user_secret_kms_key_id       = (known after apply)
+      ~ network_type                        = "IPV4" -> (known after apply)
+      ~ port                                = 3306 -> (known after apply)
+      ~ preferred_maintenance_window        = "mon:09:52-mon:10:22" -> (known after apply)
+      ~ reader_endpoint                     = "udacity-db-cluster.cluster-ro-ceilbe2ir4u7.us-east-2.rds.amazonaws.com" -> (known after apply)
+      + storage_type                        = (known after apply)
+      - tags                                = {} -> null
+        # (19 unchanged attributes hidden)
+    }
+
+  # module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0] must be replaced
+-/+ resource "aws_rds_cluster_instance" "udacity_instance" {
+      + apply_immediately                     = (known after apply)
+      ~ arn                                   = "arn:aws:rds:us-east-2:738782963780:db:udacity-db-instance-0" -> (known after apply)
+      ~ availability_zone                     = "us-east-2a" -> (known after apply)
+      ~ ca_cert_identifier                    = "rds-ca-2019" -> (known after apply)
+      ~ cluster_identifier                    = "udacity-db-cluster" # forces replacement -> (known after apply) # forces replacement
+      ~ db_parameter_group_name               = "default.aurora-mysql5.7" -> (known after apply)
+      ~ dbi_resource_id                       = "db-AFRT7ML3A2RUEEN4J6G5N2T3UI" -> (known after apply)
+      ~ endpoint                              = "udacity-db-instance-0.ceilbe2ir4u7.us-east-2.rds.amazonaws.com" -> (known after apply)
+      ~ engine_version_actual                 = "5.7.mysql_aurora.2.07.10" -> (known after apply)
+      ~ id                                    = "udacity-db-instance-0" -> (known after apply)
+      + identifier_prefix                     = (known after apply)
+      + kms_key_id                            = (known after apply)
+      + monitoring_role_arn                   = (known after apply)
+      ~ network_type                          = "IPV4" -> (known after apply)
+      ~ performance_insights_enabled          = false -> (known after apply)
+      + performance_insights_kms_key_id       = (known after apply)
+      ~ performance_insights_retention_period = 0 -> (known after apply)
+      ~ port                                  = 3306 -> (known after apply)
+      ~ preferred_backup_window               = "03:00-05:00" -> (known after apply)
+      ~ preferred_maintenance_window          = "sun:08:28-sun:08:58" -> (known after apply)
+      ~ storage_encrypted                     = false -> (known after apply)
+      - tags                                  = {} -> null
+      ~ writer                                = false -> (known after apply)
+        # (11 unchanged attributes hidden)
+    }
+
+  # module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1] must be replaced
+-/+ resource "aws_rds_cluster_instance" "udacity_instance" {
+      + apply_immediately                     = (known after apply)
+      ~ arn                                   = "arn:aws:rds:us-east-2:738782963780:db:udacity-db-instance-1" -> (known after apply)
+      ~ availability_zone                     = "us-east-2c" -> (known after apply)
+      ~ ca_cert_identifier                    = "rds-ca-2019" -> (known after apply)
+      ~ cluster_identifier                    = "udacity-db-cluster" # forces replacement -> (known after apply) # forces replacement
+      ~ db_parameter_group_name               = "default.aurora-mysql5.7" -> (known after apply)
+      ~ dbi_resource_id                       = "db-YGANUAGKDNK57H35I2PQ62CQ2I" -> (known after apply)
+      ~ endpoint                              = "udacity-db-instance-1.ceilbe2ir4u7.us-east-2.rds.amazonaws.com" -> (known after apply)
+      ~ engine_version_actual                 = "5.7.mysql_aurora.2.07.10" -> (known after apply)
+      ~ id                                    = "udacity-db-instance-1" -> (known after apply)
+      + identifier_prefix                     = (known after apply)
+      + kms_key_id                            = (known after apply)
+      + monitoring_role_arn                   = (known after apply)
+      ~ network_type                          = "IPV4" -> (known after apply)
+      ~ performance_insights_enabled          = false -> (known after apply)
+      + performance_insights_kms_key_id       = (known after apply)
+      ~ performance_insights_retention_period = 0 -> (known after apply)
+      ~ port                                  = 3306 -> (known after apply)
+      ~ preferred_backup_window               = "03:00-05:00" -> (known after apply)
+      ~ preferred_maintenance_window          = "fri:06:35-fri:07:05" -> (known after apply)
+      ~ storage_encrypted                     = false -> (known after apply)
+      - tags                                  = {} -> null
+      ~ writer                                = true -> (known after apply)
+        # (11 unchanged attributes hidden)
+    }
+
+  # module.project_rds_s.aws_rds_cluster.udacity_cluster-s will be created
+  + resource "aws_rds_cluster" "udacity_cluster-s" {
+      + allocated_storage               = (known after apply)
+      + apply_immediately               = (known after apply)
+      + arn                             = (known after apply)
+      + availability_zones              = [
+          + "us-west-1a",
+          + "us-west-1b",
+        ]
+      + backup_retention_period         = 5
+      + cluster_identifier              = "udacity-db-cluster-s"
+      + cluster_identifier_prefix       = (known after apply)
+      + cluster_members                 = (known after apply)
+      + cluster_resource_id             = (known after apply)
+      + copy_tags_to_snapshot           = false
+      + database_name                   = (known after apply)
+      + db_cluster_parameter_group_name = "udacity-pg-s"
+      + db_subnet_group_name            = "udacity_db_subnet_group"
+      + db_system_id                    = (known after apply)
+      + delete_automated_backups        = true
+      + enable_global_write_forwarding  = false
+      + enable_http_endpoint            = false
+      + endpoint                        = (known after apply)
+      + engine                          = "aurora-mysql"
+      + engine_mode                     = "provisioned"
+      + engine_version                  = "5.7.mysql_aurora.2.07.10"
+      + engine_version_actual           = (known after apply)
+      + hosted_zone_id                  = (known after apply)
+      + iam_roles                       = (known after apply)
+      + id                              = (known after apply)
+      + kms_key_id                      = (known after apply)
+      + master_password                 = (sensitive value)
+      + master_user_secret              = (known after apply)
+      + master_user_secret_kms_key_id   = (known after apply)
+      + master_username                 = "udacity"
+      + network_type                    = (known after apply)
+      + port                            = (known after apply)
+      + preferred_backup_window         = "03:00-05:00"
+      + preferred_maintenance_window    = (known after apply)
+      + reader_endpoint                 = (known after apply)
+      + skip_final_snapshot             = true
+      + storage_encrypted               = false
+      + storage_type                    = (known after apply)
+      + tags_all                        = (known after apply)
+      + vpc_security_group_ids          = [
+          + "sg-085bb3bc1d16769be",
+        ]
+    }
+
+  # module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0] will be created
+  + resource "aws_rds_cluster_instance" "udacity_instance-s" {
+      + apply_immediately                     = (known after apply)
+      + arn                                   = (known after apply)
+      + auto_minor_version_upgrade            = true
+      + availability_zone                     = (known after apply)
+      + ca_cert_identifier                    = (known after apply)
+      + cluster_identifier                    = (known after apply)
+      + copy_tags_to_snapshot                 = false
+      + db_parameter_group_name               = (known after apply)
+      + db_subnet_group_name                  = "udacity_db_subnet_group"
+      + dbi_resource_id                       = (known after apply)
+      + endpoint                              = (known after apply)
+      + engine                                = "aurora-mysql"
+      + engine_version                        = "5.7.mysql_aurora.2.07.10"
+      + engine_version_actual                 = (known after apply)
+      + id                                    = (known after apply)
+      + identifier                            = "udacity-db-instance-0-s"
+      + identifier_prefix                     = (known after apply)
+      + instance_class                        = "db.t2.small"
+      + kms_key_id                            = (known after apply)
+      + monitoring_interval                   = 0
+      + monitoring_role_arn                   = (known after apply)
+      + network_type                          = (known after apply)
+      + performance_insights_enabled          = (known after apply)
+      + performance_insights_kms_key_id       = (known after apply)
+      + performance_insights_retention_period = (known after apply)
+      + port                                  = (known after apply)
+      + preferred_backup_window               = (known after apply)
+      + preferred_maintenance_window          = (known after apply)
+      + promotion_tier                        = 0
+      + publicly_accessible                   = false
+      + storage_encrypted                     = (known after apply)
+      + tags_all                              = (known after apply)
+      + writer                                = (known after apply)
+    }
+
+  # module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1] will be created
+  + resource "aws_rds_cluster_instance" "udacity_instance-s" {
+      + apply_immediately                     = (known after apply)
+      + arn                                   = (known after apply)
+      + auto_minor_version_upgrade            = true
+      + availability_zone                     = (known after apply)
+      + ca_cert_identifier                    = (known after apply)
+      + cluster_identifier                    = (known after apply)
+      + copy_tags_to_snapshot                 = false
+      + db_parameter_group_name               = (known after apply)
+      + db_subnet_group_name                  = "udacity_db_subnet_group"
+      + dbi_resource_id                       = (known after apply)
+      + endpoint                              = (known after apply)
+      + engine                                = "aurora-mysql"
+      + engine_version                        = "5.7.mysql_aurora.2.07.10"
+      + engine_version_actual                 = (known after apply)
+      + id                                    = (known after apply)
+      + identifier                            = "udacity-db-instance-1-s"
+      + identifier_prefix                     = (known after apply)
+      + instance_class                        = "db.t2.small"
+      + kms_key_id                            = (known after apply)
+      + monitoring_interval                   = 0
+      + monitoring_role_arn                   = (known after apply)
+      + network_type                          = (known after apply)
+      + performance_insights_enabled          = (known after apply)
+      + performance_insights_kms_key_id       = (known after apply)
+      + performance_insights_retention_period = (known after apply)
+      + port                                  = (known after apply)
+      + preferred_backup_window               = (known after apply)
+      + preferred_maintenance_window          = (known after apply)
+      + promotion_tier                        = 0
+      + publicly_accessible                   = false
+      + storage_encrypted                     = (known after apply)
+      + tags_all                              = (known after apply)
+      + writer                                = (known after apply)
+    }
+
+Plan: 14 to add, 0 to change, 3 to destroy.
+╷
+│ Warning: Reference to undefined provider
+│ 
+│   on main.tf line 41, in module "vpc_west":
+│   41:     aws = aws.usw1
+│ 
+│ There is no explicit declaration for local provider name "aws" in module.vpc_west, so Terraform is assuming you mean to pass a configuration for "hashicorp/aws".
+│ 
+│ If you also control the child module, add a required_providers entry named "aws" with the source address "hashicorp/aws".
+│ 
+│ (and one more similar warning elsewhere)
+╵
+╷
+│ Warning: Argument is deprecated
+│ 
+│   with module.vpc.aws_eip.nat,
+│   on modules/vpc/routes.tf line 54, in resource "aws_eip" "nat":
+│   54:    vpc = true
+│ 
+│ use domain attribute instead
+│ 
+│ (and 3 more similar warnings elsewhere)
+╵
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: no
+
+Apply cancelled.
+E1131910:zone1 stoiang$ terraform apply
+╷
+│ Warning: Reference to undefined provider
+│ 
+│   on main.tf line 41, in module "vpc_west":
+│   41:     aws = aws.usw1
+│ 
+│ There is no explicit declaration for local provider name "aws" in module.vpc_west, so Terraform is assuming you mean to pass a configuration for "hashicorp/aws".
+│ 
+│ If you also control the child module, add a required_providers entry named "aws" with the source address "hashicorp/aws".
+│ 
+│ (and one more similar warning elsewhere)
+╵
+╷
+│ Warning: Argument is deprecated
+│ 
+│   with module.vpc_west.aws_eip.nat,
+│   on modules/vpc/routes.tf line 54, in resource "aws_eip" "nat":
+│   54:    vpc = true
+│ 
+│ use domain attribute instead
+│ 
+│ (and one more similar warning elsewhere)
+╵
+╷
+│ Error: Unsupported argument
+│ 
+│   on modules/rds-p/rds.tf line 53, in resource "aws_rds_cluster" "udacity_cluster":
+│   53:   ignore_changes = [availability_zones]
+│ 
+│ An argument named "ignore_changes" is not expected here.
+╵
+E1131910:zone1 stoiang$ terraform apply
+module.vpc.aws_eip.nat[0]: Refreshing state... [id=eipalloc-0ee38f7fbe4a09b34]
+data.aws_caller_identity.current: Reading...
+data.aws_ami.amazon_linux_2: Reading...
+module.project_rds_p.aws_rds_cluster_parameter_group.cluster_pg: Refreshing state... [id=udacity-pg-p]
+module.vpc.aws_vpc.this: Refreshing state... [id=vpc-0682e35e2f25bc0dc]
+module.project_rds_s.aws_rds_cluster_parameter_group.cluster_pg-s: Refreshing state... [id=udacity-pg-s]
+module.vpc_west.aws_vpc.this: Refreshing state... [id=vpc-050604a842317a128]
+module.vpc_west.aws_eip.nat[0]: Refreshing state... [id=eipalloc-08efd3e03f695db2d]
+data.aws_caller_identity.current: Read complete after 0s [id=738782963780]
+data.aws_ami.amazon_linux_2: Read complete after 0s [id=ami-0e4bab9adfcf464b1]
+module.vpc.aws_route_table.private[0]: Refreshing state... [id=rtb-00b102dd2512fb64c]
+module.vpc.aws_route_table.private[1]: Refreshing state... [id=rtb-0be3787ee679c244a]
+module.vpc.aws_route_table.public[0]: Refreshing state... [id=rtb-00fc5c36e3ac9826e]
+module.vpc.aws_internet_gateway.this[0]: Refreshing state... [id=igw-0d30fefbd0b3d1123]
+module.vpc.aws_route_table.private[2]: Refreshing state... [id=rtb-0d58100c3d6ff7129]
+module.vpc.aws_subnet.private[0]: Refreshing state... [id=subnet-04098ca40d038bc4a]
+module.vpc.aws_subnet.private[1]: Refreshing state... [id=subnet-0a8c6598f06216a55]
+module.vpc.aws_subnet.private[2]: Refreshing state... [id=subnet-0007d7583e646f231]
+module.vpc.aws_subnet.public[0]: Refreshing state... [id=subnet-0e2308d299c5d55cc]
+module.vpc.aws_subnet.public[1]: Refreshing state... [id=subnet-01dcbd3487105703f]
+module.vpc.aws_subnet.public[2]: Refreshing state... [id=subnet-0025baab002596c34]
+module.project_ec2.aws_security_group.ec2_sg: Refreshing state... [id=sg-03a83555e13a8f5d1]
+module.project_rds_p.aws_security_group.db_sg_1: Refreshing state... [id=sg-0df9c28b1c208fe3a]
+module.project_alb.aws_lb_target_group.udacity: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-2:738782963780:targetgroup/udacity-lb-tg/6ae2213d40489dd3]
+module.vpc.aws_route.public_internet_gateway[1]: Refreshing state... [id=r-rtb-00fc5c36e3ac9826e1080289494]
+module.vpc.aws_route.public_internet_gateway[2]: Refreshing state... [id=r-rtb-00fc5c36e3ac9826e1080289494]
+module.vpc.aws_route.public_internet_gateway[0]: Refreshing state... [id=r-rtb-00fc5c36e3ac9826e1080289494]
+module.vpc.aws_route_table_association.private[0]: Refreshing state... [id=rtbassoc-075397375fe639b4a]
+module.vpc.aws_route_table_association.private[1]: Refreshing state... [id=rtbassoc-0105291eb8bd6ea71]
+module.vpc.aws_route_table_association.private[2]: Refreshing state... [id=rtbassoc-03e9ebacea5f15d27]
+module.vpc_west.aws_internet_gateway.this[0]: Refreshing state... [id=igw-060e565265673fc15]
+module.vpc_west.aws_route_table.private[0]: Refreshing state... [id=rtb-0a16b42a91a411230]
+module.vpc_west.aws_route_table.private[1]: Refreshing state... [id=rtb-050bccfbbd4d8d1c8]
+module.vpc_west.aws_subnet.private[0]: Refreshing state... [id=subnet-01571776c1d4753b8]
+module.vpc_west.aws_subnet.private[1]: Refreshing state... [id=subnet-0b3b8ed70bfc5f712]
+module.vpc_west.aws_route_table.public[0]: Refreshing state... [id=rtb-08bcf83d48ec53f0d]
+module.vpc_west.aws_subnet.public[0]: Refreshing state... [id=subnet-0b5643c0ab20758bd]
+module.vpc_west.aws_subnet.public[1]: Refreshing state... [id=subnet-0a292cd3db84e0500]
+module.vpc.aws_nat_gateway.this[0]: Refreshing state... [id=nat-05b8923ba787edd3d]
+module.vpc.aws_route_table_association.public[2]: Refreshing state... [id=rtbassoc-017e4f239e5a83d1c]
+module.vpc.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-0fa1653caa97e5c01]
+module.vpc.aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-03361115a3a8ea1e1]
+module.project_rds_p.aws_db_subnet_group.udacity_db_subnet_group: Refreshing state... [id=udacity_db_subnet_group]
+module.vpc.aws_route.private_nat_gateway[1]: Refreshing state... [id=r-rtb-0be3787ee679c244a1080289494]
+module.vpc.aws_route.private_nat_gateway[2]: Refreshing state... [id=r-rtb-0d58100c3d6ff71291080289494]
+module.vpc.aws_route.private_nat_gateway[0]: Refreshing state... [id=r-rtb-00b102dd2512fb64c1080289494]
+module.project_rds_s.aws_security_group.db_sg_2: Refreshing state... [id=sg-085bb3bc1d16769be]
+module.project_ec2.aws_instance.ubuntu[1]: Refreshing state... [id=i-0ada39ab014d55745]
+module.project_ec2.aws_instance.ubuntu[0]: Refreshing state... [id=i-02f87690ac5046baa]
+module.project_ec2.aws_instance.ubuntu[2]: Refreshing state... [id=i-078badfab03e636a7]
+module.project_rds_p.aws_rds_cluster.udacity_cluster: Refreshing state... [id=udacity-db-cluster]
+module.project_alb.aws_lb.udacity: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-2:738782963780:loadbalancer/app/udacity-lb-tf/90dad19a5fc3bb5a]
+module.project_eks.data.aws_iam_policy_document.eks_node_assume_role_policy: Reading...
+module.project_eks.data.aws_iam_policy_document.eks_node_assume_role_policy: Read complete after 0s [id=2851119427]
+module.project_eks.data.aws_iam_policy_document.eks_assume_role_policy: Reading...
+module.project_eks.data.aws_iam_policy_document.eks_assume_role_policy: Read complete after 0s [id=3552664922]
+module.vpc_west.aws_route_table_association.private[0]: Refreshing state... [id=rtbassoc-0bcb71504703f1c61]
+module.vpc_west.aws_route_table_association.private[1]: Refreshing state... [id=rtbassoc-0fc2ac813708417f1]
+module.project_eks.aws_security_group.eks-cluster: Refreshing state... [id=sg-08385e360fc8afe97]
+module.project_eks.aws_iam_policy.eks_cluster_role_cloudwatch_policy: Refreshing state... [id=arn:aws:iam::738782963780:policy/app-udacity-eks-cluster-role-cloudwatch-policy]
+module.project_eks.aws_iam_policy.eks_node_instance_policy: Refreshing state... [id=arn:aws:iam::738782963780:policy/app-udacity-instance-policy]
+module.project_eks.aws_iam_role.eks_node_cluster_role: Refreshing state... [id=app-udacity-eks-node-role]
+module.project_eks.aws_iam_role.eks_cluster_role: Refreshing state... [id=app-udacity-eks-cluster-role]
+module.project_rds_s.aws_db_subnet_group.udacity_db_subnet_group: Refreshing state... [id=udacity_db_subnet_group]
+module.vpc_west.aws_route.public_internet_gateway[1]: Refreshing state... [id=r-rtb-08bcf83d48ec53f0d1080289494]
+module.vpc_west.aws_route.public_internet_gateway[0]: Refreshing state... [id=r-rtb-08bcf83d48ec53f0d1080289494]
+module.vpc_west.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-0a043ec545cd7fe21]
+module.vpc_west.aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-03576b0abf5f8f8a1]
+module.vpc_west.aws_nat_gateway.this[0]: Refreshing state... [id=nat-099da29c653085f31]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1]: Refreshing state... [id=udacity-db-instance-1]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Refreshing state... [id=udacity-db-instance-0]
+module.project_alb.aws_lb_listener.udacity: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-2:738782963780:listener/app/udacity-lb-tf/90dad19a5fc3bb5a/8cf778a89bf897bd]
+module.project_eks.aws_iam_role_policy_attachment.node_harmony_policy_attachment: Refreshing state... [id=app-udacity-eks-node-role-2023120112470924730000000a]
+module.project_eks.aws_iam_role_policy_attachment.node_CloudWatchAgentServerPolicy: Refreshing state... [id=app-udacity-eks-node-role-2023120112470941910000000d]
+module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSCloudwatchPolicy: Refreshing state... [id=app-udacity-eks-node-role-20231201124709222400000008]
+module.project_eks.aws_iam_role_policy_attachment.node_AmazonEC2ContainerRegistryReadOnly: Refreshing state... [id=app-udacity-eks-node-role-2023120112470927550000000b]
+module.project_eks.aws_iam_role_policy_attachment.node_AmazonEKS_CNI_Policy: Refreshing state... [id=app-udacity-eks-node-role-20231201124709236000000009]
+module.project_eks.aws_iam_role_policy_attachment.node_AmazonEKSWorkerNodePolicy: Refreshing state... [id=app-udacity-eks-node-role-2023120112470941190000000c]
+module.vpc_west.aws_route.private_nat_gateway[0]: Refreshing state... [id=r-rtb-0a16b42a91a4112301080289494]
+module.vpc_west.aws_route.private_nat_gateway[1]: Refreshing state... [id=r-rtb-050bccfbbd4d8d1c81080289494]
+module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSClusterPolicy: Refreshing state... [id=app-udacity-eks-cluster-role-2023120112470966010000000f]
+module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSServicePolicy: Refreshing state... [id=app-udacity-eks-cluster-role-2023120112470960240000000e]
+module.project_eks.aws_eks_cluster.cluster: Refreshing state... [id=udacity-cluster]
+data.aws_eks_cluster.cluster: Reading...
+data.aws_eks_cluster_auth.cluster: Reading...
+data.aws_eks_cluster_auth.cluster: Read complete after 0s [id=udacity-cluster]
+module.project_eks.aws_eks_node_group.node: Refreshing state... [id=udacity-cluster:app-udacity-node-group]
+module.project_alb.aws_lb_target_group_attachment.udacity[2]: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-2:738782963780:targetgroup/udacity-lb-tg/6ae2213d40489dd3-20231201124534858200000006]
+module.project_alb.aws_lb_target_group_attachment.udacity[0]: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-2:738782963780:targetgroup/udacity-lb-tg/6ae2213d40489dd3-20231201124535037300000007]
+module.project_alb.aws_lb_target_group_attachment.udacity[1]: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-2:738782963780:targetgroup/udacity-lb-tg/6ae2213d40489dd3-20231201124534541600000005]
+data.aws_eks_cluster.cluster: Read complete after 0s [id=udacity-cluster]
+kubernetes_namespace.udacity: Refreshing state... [id=udacity]
+kubernetes_service.grafana-external: Refreshing state... [id=monitoring/grafana-external]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSCloudwatchPolicy will be created
+  + resource "aws_iam_role_policy_attachment" "cluster_AmazonEKSCloudwatchPolicy" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::738782963780:policy/app-udacity-eks-cluster-role-cloudwatch-policy"
+      + role       = "app-udacity-eks-node-role"
+    }
+
+  # module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSClusterPolicy will be created
+  + resource "aws_iam_role_policy_attachment" "cluster_AmazonEKSClusterPolicy" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
+      + role       = "app-udacity-eks-cluster-role"
+    }
+
+  # module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSServicePolicy will be created
+  + resource "aws_iam_role_policy_attachment" "cluster_AmazonEKSServicePolicy" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEKSServicePolicy"
+      + role       = "app-udacity-eks-cluster-role"
+    }
+
+  # module.project_eks.aws_iam_role_policy_attachment.node_AmazonEC2ContainerRegistryReadOnly will be created
+  + resource "aws_iam_role_policy_attachment" "node_AmazonEC2ContainerRegistryReadOnly" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
+      + role       = "app-udacity-eks-node-role"
+    }
+
+  # module.project_eks.aws_iam_role_policy_attachment.node_AmazonEKSWorkerNodePolicy will be created
+  + resource "aws_iam_role_policy_attachment" "node_AmazonEKSWorkerNodePolicy" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"
+      + role       = "app-udacity-eks-node-role"
+    }
+
+  # module.project_eks.aws_iam_role_policy_attachment.node_AmazonEKS_CNI_Policy will be created
+  + resource "aws_iam_role_policy_attachment" "node_AmazonEKS_CNI_Policy" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"
+      + role       = "app-udacity-eks-node-role"
+    }
+
+  # module.project_eks.aws_iam_role_policy_attachment.node_CloudWatchAgentServerPolicy will be created
+  + resource "aws_iam_role_policy_attachment" "node_CloudWatchAgentServerPolicy" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy"
+      + role       = "app-udacity-eks-node-role"
+    }
+
+  # module.project_eks.aws_iam_role_policy_attachment.node_harmony_policy_attachment will be created
+  + resource "aws_iam_role_policy_attachment" "node_harmony_policy_attachment" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::738782963780:policy/app-udacity-instance-policy"
+      + role       = "app-udacity-eks-node-role"
+    }
+
+  # module.project_rds_s.aws_rds_cluster.udacity_cluster-s will be created
+  + resource "aws_rds_cluster" "udacity_cluster-s" {
+      + allocated_storage               = (known after apply)
+      + apply_immediately               = (known after apply)
+      + arn                             = (known after apply)
+      + availability_zones              = [
+          + "us-west-1a",
+          + "us-west-1b",
+        ]
+      + backup_retention_period         = 5
+      + cluster_identifier              = "udacity-db-cluster-s"
+      + cluster_identifier_prefix       = (known after apply)
+      + cluster_members                 = (known after apply)
+      + cluster_resource_id             = (known after apply)
+      + copy_tags_to_snapshot           = false
+      + database_name                   = (known after apply)
+      + db_cluster_parameter_group_name = "udacity-pg-s"
+      + db_subnet_group_name            = "udacity_db_subnet_group"
+      + db_system_id                    = (known after apply)
+      + delete_automated_backups        = true
+      + enable_global_write_forwarding  = false
+      + enable_http_endpoint            = false
+      + endpoint                        = (known after apply)
+      + engine                          = "aurora-mysql"
+      + engine_mode                     = "provisioned"
+      + engine_version                  = "5.7.mysql_aurora.2.07.10"
+      + engine_version_actual           = (known after apply)
+      + hosted_zone_id                  = (known after apply)
+      + iam_roles                       = (known after apply)
+      + id                              = (known after apply)
+      + kms_key_id                      = (known after apply)
+      + master_password                 = (sensitive value)
+      + master_user_secret              = (known after apply)
+      + master_user_secret_kms_key_id   = (known after apply)
+      + master_username                 = "udacity"
+      + network_type                    = (known after apply)
+      + port                            = (known after apply)
+      + preferred_backup_window         = "03:00-05:00"
+      + preferred_maintenance_window    = (known after apply)
+      + reader_endpoint                 = (known after apply)
+      + skip_final_snapshot             = true
+      + storage_encrypted               = false
+      + storage_type                    = (known after apply)
+      + tags_all                        = (known after apply)
+      + vpc_security_group_ids          = [
+          + "sg-085bb3bc1d16769be",
+        ]
+    }
+
+  # module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0] will be created
+  + resource "aws_rds_cluster_instance" "udacity_instance-s" {
+      + apply_immediately                     = (known after apply)
+      + arn                                   = (known after apply)
+      + auto_minor_version_upgrade            = true
+      + availability_zone                     = (known after apply)
+      + ca_cert_identifier                    = (known after apply)
+      + cluster_identifier                    = (known after apply)
+      + copy_tags_to_snapshot                 = false
+      + db_parameter_group_name               = (known after apply)
+      + db_subnet_group_name                  = "udacity_db_subnet_group"
+      + dbi_resource_id                       = (known after apply)
+      + endpoint                              = (known after apply)
+      + engine                                = "aurora-mysql"
+      + engine_version                        = "5.7.mysql_aurora.2.07.10"
+      + engine_version_actual                 = (known after apply)
+      + id                                    = (known after apply)
+      + identifier                            = "udacity-db-instance-0-s"
+      + identifier_prefix                     = (known after apply)
+      + instance_class                        = "db.t2.small"
+      + kms_key_id                            = (known after apply)
+      + monitoring_interval                   = 0
+      + monitoring_role_arn                   = (known after apply)
+      + network_type                          = (known after apply)
+      + performance_insights_enabled          = (known after apply)
+      + performance_insights_kms_key_id       = (known after apply)
+      + performance_insights_retention_period = (known after apply)
+      + port                                  = (known after apply)
+      + preferred_backup_window               = (known after apply)
+      + preferred_maintenance_window          = (known after apply)
+      + promotion_tier                        = 0
+      + publicly_accessible                   = false
+      + storage_encrypted                     = (known after apply)
+      + tags_all                              = (known after apply)
+      + writer                                = (known after apply)
+    }
+
+  # module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1] will be created
+  + resource "aws_rds_cluster_instance" "udacity_instance-s" {
+      + apply_immediately                     = (known after apply)
+      + arn                                   = (known after apply)
+      + auto_minor_version_upgrade            = true
+      + availability_zone                     = (known after apply)
+      + ca_cert_identifier                    = (known after apply)
+      + cluster_identifier                    = (known after apply)
+      + copy_tags_to_snapshot                 = false
+      + db_parameter_group_name               = (known after apply)
+      + db_subnet_group_name                  = "udacity_db_subnet_group"
+      + dbi_resource_id                       = (known after apply)
+      + endpoint                              = (known after apply)
+      + engine                                = "aurora-mysql"
+      + engine_version                        = "5.7.mysql_aurora.2.07.10"
+      + engine_version_actual                 = (known after apply)
+      + id                                    = (known after apply)
+      + identifier                            = "udacity-db-instance-1-s"
+      + identifier_prefix                     = (known after apply)
+      + instance_class                        = "db.t2.small"
+      + kms_key_id                            = (known after apply)
+      + monitoring_interval                   = 0
+      + monitoring_role_arn                   = (known after apply)
+      + network_type                          = (known after apply)
+      + performance_insights_enabled          = (known after apply)
+      + performance_insights_kms_key_id       = (known after apply)
+      + performance_insights_retention_period = (known after apply)
+      + port                                  = (known after apply)
+      + preferred_backup_window               = (known after apply)
+      + preferred_maintenance_window          = (known after apply)
+      + promotion_tier                        = 0
+      + publicly_accessible                   = false
+      + storage_encrypted                     = (known after apply)
+      + tags_all                              = (known after apply)
+      + writer                                = (known after apply)
+    }
+
+Plan: 11 to add, 0 to change, 0 to destroy.
+╷
+│ Warning: Reference to undefined provider
+│ 
+│   on main.tf line 41, in module "vpc_west":
+│   41:     aws = aws.usw1
+│ 
+│ There is no explicit declaration for local provider name "aws" in module.vpc_west, so Terraform is assuming you mean to pass a configuration for "hashicorp/aws".
+│ 
+│ If you also control the child module, add a required_providers entry named "aws" with the source address "hashicorp/aws".
+│ 
+│ (and one more similar warning elsewhere)
+╵
+╷
+│ Warning: Argument is deprecated
+│ 
+│   with module.vpc.aws_eip.nat,
+│   on modules/vpc/routes.tf line 54, in resource "aws_eip" "nat":
+│   54:    vpc = true
+│ 
+│ use domain attribute instead
+│ 
+│ (and 3 more similar warnings elsewhere)
+╵
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSClusterPolicy: Creating...
+module.project_eks.aws_iam_role_policy_attachment.node_CloudWatchAgentServerPolicy: Creating...
+module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSCloudwatchPolicy: Creating...
+module.project_eks.aws_iam_role_policy_attachment.node_AmazonEKS_CNI_Policy: Creating...
+module.project_eks.aws_iam_role_policy_attachment.node_AmazonEKSWorkerNodePolicy: Creating...
+module.project_eks.aws_iam_role_policy_attachment.node_AmazonEC2ContainerRegistryReadOnly: Creating...
+module.project_eks.aws_iam_role_policy_attachment.node_harmony_policy_attachment: Creating...
+module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSServicePolicy: Creating...
+module.project_rds_s.aws_rds_cluster.udacity_cluster-s: Creating...
+module.project_eks.aws_iam_role_policy_attachment.node_harmony_policy_attachment: Creation complete after 1s [id=app-udacity-eks-node-role-20231201185325889900000001]
+module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSCloudwatchPolicy: Creation complete after 1s [id=app-udacity-eks-node-role-20231201185325925900000002]
+module.project_eks.aws_iam_role_policy_attachment.node_AmazonEKSWorkerNodePolicy: Creation complete after 1s [id=app-udacity-eks-node-role-20231201185325954300000003]
+module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSClusterPolicy: Creation complete after 1s [id=app-udacity-eks-cluster-role-20231201185325965600000004]
+module.project_eks.aws_iam_role_policy_attachment.node_AmazonEKS_CNI_Policy: Creation complete after 1s [id=app-udacity-eks-node-role-20231201185325971200000005]
+module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSServicePolicy: Creation complete after 1s [id=app-udacity-eks-cluster-role-20231201185325995600000007]
+module.project_eks.aws_iam_role_policy_attachment.node_CloudWatchAgentServerPolicy: Creation complete after 1s [id=app-udacity-eks-node-role-20231201185325981400000006]
+module.project_eks.aws_iam_role_policy_attachment.node_AmazonEC2ContainerRegistryReadOnly: Creation complete after 1s [id=app-udacity-eks-node-role-20231201185326037100000008]
+module.project_rds_s.aws_rds_cluster.udacity_cluster-s: Still creating... [10s elapsed]
+module.project_rds_s.aws_rds_cluster.udacity_cluster-s: Still creating... [21s elapsed]
+module.project_rds_s.aws_rds_cluster.udacity_cluster-s: Still creating... [31s elapsed]
+module.project_rds_s.aws_rds_cluster.udacity_cluster-s: Still creating... [41s elapsed]
+module.project_rds_s.aws_rds_cluster.udacity_cluster-s: Creation complete after 44s [id=udacity-db-cluster-s]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Creating...
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Creating...
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [1m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [1m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [1m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [1m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [1m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [1m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [1m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [1m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [1m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [1m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [1m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [1m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [2m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [2m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [2m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [2m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [2m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [2m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [2m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [2m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [2m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [2m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [2m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [2m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [3m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [3m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [3m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [3m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [3m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [3m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [3m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [3m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [3m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [3m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [3m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [3m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [4m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [4m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [4m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [4m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [4m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [4m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [4m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [4m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [4m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [4m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [4m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [4m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [5m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [5m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [5m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [5m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [5m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [5m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [5m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [5m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [5m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [5m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [5m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [5m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [6m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [6m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [6m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [6m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [6m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [6m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [6m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [6m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [6m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [6m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [6m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [6m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [7m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [7m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [7m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [7m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [7m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [7m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [7m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [7m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [7m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [7m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [7m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [7m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [8m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still creating... [8m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Creation complete after 8m6s [id=udacity-db-instance-0-s]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [8m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [8m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [8m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [8m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [8m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [9m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [9m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [9m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [9m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [9m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [9m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [10m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [10m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [10m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [10m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [10m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [10m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [11m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [11m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [11m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [11m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [11m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [11m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [12m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [12m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [12m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [12m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [12m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [12m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [13m1s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [13m11s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [13m21s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [13m31s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [13m41s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [13m51s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [14m1s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [14m11s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [14m21s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [14m31s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [14m41s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [14m51s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [15m1s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [15m11s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [15m21s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still creating... [15m31s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Creation complete after 15m32s [id=udacity-db-instance-1-s]
+
+Apply complete! Resources: 11 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+account_id = "738782963780"
+caller_arn = "arn:aws:iam::738782963780:user/admin"
+caller_user = "AIDA2YAXFNBCKQ35UHEYW"
+private_subnet_ids = [
+  "subnet-01571776c1d4753b8",
+  "subnet-0b3b8ed70bfc5f712",
+]
+public_subnet_ids = [
+  "subnet-0b5643c0ab20758bd",
+  "subnet-0a292cd3db84e0500",
+]
+vpc_id = "vpc-050604a842317a128"
+E1131910:zone1 stoiang$ 

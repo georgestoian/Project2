@@ -1,0 +1,1023 @@
+      - id             = "rtbassoc-017e4f239e5a83d1c" -> null
+      - route_table_id = "rtb-00fc5c36e3ac9826e" -> null
+      - subnet_id      = "subnet-0025baab002596c34" -> null
+    }
+
+  # module.vpc.aws_subnet.private[0] will be destroyed
+  - resource "aws_subnet" "private" {
+      - arn                                            = "arn:aws:ec2:us-east-2:738782963780:subnet/subnet-04098ca40d038bc4a" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-2a" -> null
+      - availability_zone_id                           = "use2-az1" -> null
+      - cidr_block                                     = "10.100.1.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-04098ca40d038bc4a" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "738782963780" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Name"                            = "udacity-project-private-us-east-2a"
+          - "kubernetes.io/role/internal-elb" = "1"
+        } -> null
+      - tags_all                                       = {
+          - "Name"                            = "udacity-project-private-us-east-2a"
+          - "Terraform"                       = "true"
+          - "kubernetes.io/role/internal-elb" = "1"
+        } -> null
+      - vpc_id                                         = "vpc-0682e35e2f25bc0dc" -> null
+    }
+
+  # module.vpc.aws_subnet.private[1] will be destroyed
+  - resource "aws_subnet" "private" {
+      - arn                                            = "arn:aws:ec2:us-east-2:738782963780:subnet/subnet-0a8c6598f06216a55" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-2b" -> null
+      - availability_zone_id                           = "use2-az2" -> null
+      - cidr_block                                     = "10.100.2.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0a8c6598f06216a55" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "738782963780" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Name"                            = "udacity-project-private-us-east-2b"
+          - "kubernetes.io/role/internal-elb" = "1"
+        } -> null
+      - tags_all                                       = {
+          - "Name"                            = "udacity-project-private-us-east-2b"
+          - "Terraform"                       = "true"
+          - "kubernetes.io/role/internal-elb" = "1"
+        } -> null
+      - vpc_id                                         = "vpc-0682e35e2f25bc0dc" -> null
+    }
+
+  # module.vpc.aws_subnet.private[2] will be destroyed
+  - resource "aws_subnet" "private" {
+      - arn                                            = "arn:aws:ec2:us-east-2:738782963780:subnet/subnet-0007d7583e646f231" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-2c" -> null
+      - availability_zone_id                           = "use2-az3" -> null
+      - cidr_block                                     = "10.100.3.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0007d7583e646f231" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "738782963780" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Name"                            = "udacity-project-private-us-east-2c"
+          - "kubernetes.io/role/internal-elb" = "1"
+        } -> null
+      - tags_all                                       = {
+          - "Name"                            = "udacity-project-private-us-east-2c"
+          - "Terraform"                       = "true"
+          - "kubernetes.io/role/internal-elb" = "1"
+        } -> null
+      - vpc_id                                         = "vpc-0682e35e2f25bc0dc" -> null
+    }
+
+  # module.vpc.aws_subnet.public[0] will be destroyed
+  - resource "aws_subnet" "public" {
+      - arn                                            = "arn:aws:ec2:us-east-2:738782963780:subnet/subnet-0e2308d299c5d55cc" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-2a" -> null
+      - availability_zone_id                           = "use2-az1" -> null
+      - cidr_block                                     = "10.100.10.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0e2308d299c5d55cc" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = true -> null
+      - owner_id                                       = "738782963780" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Name"                   = "udacity-project-public-us-east-2a"
+          - "kubernetes.io/role/elb" = "1"
+        } -> null
+      - tags_all                                       = {
+          - "Name"                   = "udacity-project-public-us-east-2a"
+          - "Terraform"              = "true"
+          - "kubernetes.io/role/elb" = "1"
+        } -> null
+      - vpc_id                                         = "vpc-0682e35e2f25bc0dc" -> null
+    }
+
+  # module.vpc.aws_subnet.public[1] will be destroyed
+  - resource "aws_subnet" "public" {
+      - arn                                            = "arn:aws:ec2:us-east-2:738782963780:subnet/subnet-01dcbd3487105703f" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-2b" -> null
+      - availability_zone_id                           = "use2-az2" -> null
+      - cidr_block                                     = "10.100.11.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-01dcbd3487105703f" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = true -> null
+      - owner_id                                       = "738782963780" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Name"                   = "udacity-project-public-us-east-2b"
+          - "kubernetes.io/role/elb" = "1"
+        } -> null
+      - tags_all                                       = {
+          - "Name"                   = "udacity-project-public-us-east-2b"
+          - "Terraform"              = "true"
+          - "kubernetes.io/role/elb" = "1"
+        } -> null
+      - vpc_id                                         = "vpc-0682e35e2f25bc0dc" -> null
+    }
+
+  # module.vpc.aws_subnet.public[2] will be destroyed
+  - resource "aws_subnet" "public" {
+      - arn                                            = "arn:aws:ec2:us-east-2:738782963780:subnet/subnet-0025baab002596c34" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-2c" -> null
+      - availability_zone_id                           = "use2-az3" -> null
+      - cidr_block                                     = "10.100.12.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0025baab002596c34" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = true -> null
+      - owner_id                                       = "738782963780" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Name"                   = "udacity-project-public-us-east-2c"
+          - "kubernetes.io/role/elb" = "1"
+        } -> null
+      - tags_all                                       = {
+          - "Name"                   = "udacity-project-public-us-east-2c"
+          - "Terraform"              = "true"
+          - "kubernetes.io/role/elb" = "1"
+        } -> null
+      - vpc_id                                         = "vpc-0682e35e2f25bc0dc" -> null
+    }
+
+  # module.vpc.aws_vpc.this will be destroyed
+  - resource "aws_vpc" "this" {
+      - arn                                  = "arn:aws:ec2:us-east-2:738782963780:vpc/vpc-0682e35e2f25bc0dc" -> null
+      - assign_generated_ipv6_cidr_block     = false -> null
+      - cidr_block                           = "10.100.0.0/16" -> null
+      - default_network_acl_id               = "acl-0a193afa17b10ac42" -> null
+      - default_route_table_id               = "rtb-0fa31692f06b4dde5" -> null
+      - default_security_group_id            = "sg-04b5ff797d524e73b" -> null
+      - dhcp_options_id                      = "dopt-03306d67317bd8fc9" -> null
+      - enable_dns_hostnames                 = true -> null
+      - enable_dns_support                   = true -> null
+      - enable_network_address_usage_metrics = false -> null
+      - id                                   = "vpc-0682e35e2f25bc0dc" -> null
+      - instance_tenancy                     = "default" -> null
+      - ipv6_netmask_length                  = 0 -> null
+      - main_route_table_id                  = "rtb-0fa31692f06b4dde5" -> null
+      - owner_id                             = "738782963780" -> null
+      - tags                                 = {
+          - "Name" = "udacity-project"
+        } -> null
+      - tags_all                             = {
+          - "Name"      = "udacity-project"
+          - "Terraform" = "true"
+        } -> null
+    }
+
+  # module.vpc_west.aws_eip.nat[0] will be destroyed
+  - resource "aws_eip" "nat" {
+      - allocation_id        = "eipalloc-08efd3e03f695db2d" -> null
+      - association_id       = "eipassoc-0e2f72d0412ca0f9d" -> null
+      - domain               = "vpc" -> null
+      - id                   = "eipalloc-08efd3e03f695db2d" -> null
+      - network_border_group = "us-west-1" -> null
+      - network_interface    = "eni-002a7fed9edb41db1" -> null
+      - private_dns          = "ip-10-100-10-22.us-west-1.compute.internal" -> null
+      - private_ip           = "10.100.10.22" -> null
+      - public_dns           = "ec2-18-144-144-94.us-west-1.compute.amazonaws.com" -> null
+      - public_ip            = "18.144.144.94" -> null
+      - public_ipv4_pool     = "amazon" -> null
+      - tags                 = {
+          - "Name" = "udacity-project-us-west-1a"
+        } -> null
+      - tags_all             = {
+          - "Name" = "udacity-project-us-west-1a"
+        } -> null
+      - vpc                  = true -> null
+    }
+
+  # module.vpc_west.aws_internet_gateway.this[0] will be destroyed
+  - resource "aws_internet_gateway" "this" {
+      - arn      = "arn:aws:ec2:us-west-1:738782963780:internet-gateway/igw-060e565265673fc15" -> null
+      - id       = "igw-060e565265673fc15" -> null
+      - owner_id = "738782963780" -> null
+      - tags     = {
+          - "Name" = "udacity-project"
+        } -> null
+      - tags_all = {
+          - "Name" = "udacity-project"
+        } -> null
+      - vpc_id   = "vpc-050604a842317a128" -> null
+    }
+
+  # module.vpc_west.aws_nat_gateway.this[0] will be destroyed
+  - resource "aws_nat_gateway" "this" {
+      - allocation_id                      = "eipalloc-08efd3e03f695db2d" -> null
+      - association_id                     = "eipassoc-0e2f72d0412ca0f9d" -> null
+      - connectivity_type                  = "public" -> null
+      - id                                 = "nat-099da29c653085f31" -> null
+      - network_interface_id               = "eni-002a7fed9edb41db1" -> null
+      - private_ip                         = "10.100.10.22" -> null
+      - public_ip                          = "18.144.144.94" -> null
+      - secondary_allocation_ids           = [] -> null
+      - secondary_private_ip_address_count = 0 -> null
+      - secondary_private_ip_addresses     = [] -> null
+      - subnet_id                          = "subnet-0b5643c0ab20758bd" -> null
+      - tags                               = {
+          - "Name" = "udacity-project-us-west-1a"
+        } -> null
+      - tags_all                           = {
+          - "Name" = "udacity-project-us-west-1a"
+        } -> null
+    }
+
+  # module.vpc_west.aws_route.private_nat_gateway[0] will be destroyed
+  - resource "aws_route" "private_nat_gateway" {
+      - destination_cidr_block = "0.0.0.0/0" -> null
+      - id                     = "r-rtb-0a16b42a91a4112301080289494" -> null
+      - nat_gateway_id         = "nat-099da29c653085f31" -> null
+      - origin                 = "CreateRoute" -> null
+      - route_table_id         = "rtb-0a16b42a91a411230" -> null
+      - state                  = "active" -> null
+
+      - timeouts {
+          - create = "5m" -> null
+        }
+    }
+
+  # module.vpc_west.aws_route.private_nat_gateway[1] will be destroyed
+  - resource "aws_route" "private_nat_gateway" {
+      - destination_cidr_block = "0.0.0.0/0" -> null
+      - id                     = "r-rtb-050bccfbbd4d8d1c81080289494" -> null
+      - nat_gateway_id         = "nat-099da29c653085f31" -> null
+      - origin                 = "CreateRoute" -> null
+      - route_table_id         = "rtb-050bccfbbd4d8d1c8" -> null
+      - state                  = "active" -> null
+
+      - timeouts {
+          - create = "5m" -> null
+        }
+    }
+
+  # module.vpc_west.aws_route.public_internet_gateway[0] will be destroyed
+  - resource "aws_route" "public_internet_gateway" {
+      - destination_cidr_block = "0.0.0.0/0" -> null
+      - gateway_id             = "igw-060e565265673fc15" -> null
+      - id                     = "r-rtb-08bcf83d48ec53f0d1080289494" -> null
+      - origin                 = "CreateRoute" -> null
+      - route_table_id         = "rtb-08bcf83d48ec53f0d" -> null
+      - state                  = "active" -> null
+
+      - timeouts {
+          - create = "5m" -> null
+        }
+    }
+
+  # module.vpc_west.aws_route.public_internet_gateway[1] will be destroyed
+  - resource "aws_route" "public_internet_gateway" {
+      - destination_cidr_block = "0.0.0.0/0" -> null
+      - gateway_id             = "igw-060e565265673fc15" -> null
+      - id                     = "r-rtb-08bcf83d48ec53f0d1080289494" -> null
+      - origin                 = "CreateRoute" -> null
+      - route_table_id         = "rtb-08bcf83d48ec53f0d" -> null
+      - state                  = "active" -> null
+
+      - timeouts {
+          - create = "5m" -> null
+        }
+    }
+
+  # module.vpc_west.aws_route_table.private[0] will be destroyed
+  - resource "aws_route_table" "private" {
+      - arn              = "arn:aws:ec2:us-west-1:738782963780:route-table/rtb-0a16b42a91a411230" -> null
+      - id               = "rtb-0a16b42a91a411230" -> null
+      - owner_id         = "738782963780" -> null
+      - propagating_vgws = [] -> null
+      - route            = [
+          - {
+              - carrier_gateway_id         = ""
+              - cidr_block                 = "0.0.0.0/0"
+              - core_network_arn           = ""
+              - destination_prefix_list_id = ""
+              - egress_only_gateway_id     = ""
+              - gateway_id                 = ""
+              - ipv6_cidr_block            = ""
+              - local_gateway_id           = ""
+              - nat_gateway_id             = "nat-099da29c653085f31"
+              - network_interface_id       = ""
+              - transit_gateway_id         = ""
+              - vpc_endpoint_id            = ""
+              - vpc_peering_connection_id  = ""
+            },
+        ] -> null
+      - tags             = {
+          - "Name" = "udacity-project-private-us-west-1a"
+        } -> null
+      - tags_all         = {
+          - "Name" = "udacity-project-private-us-west-1a"
+        } -> null
+      - vpc_id           = "vpc-050604a842317a128" -> null
+    }
+
+  # module.vpc_west.aws_route_table.private[1] will be destroyed
+  - resource "aws_route_table" "private" {
+      - arn              = "arn:aws:ec2:us-west-1:738782963780:route-table/rtb-050bccfbbd4d8d1c8" -> null
+      - id               = "rtb-050bccfbbd4d8d1c8" -> null
+      - owner_id         = "738782963780" -> null
+      - propagating_vgws = [] -> null
+      - route            = [
+          - {
+              - carrier_gateway_id         = ""
+              - cidr_block                 = "0.0.0.0/0"
+              - core_network_arn           = ""
+              - destination_prefix_list_id = ""
+              - egress_only_gateway_id     = ""
+              - gateway_id                 = ""
+              - ipv6_cidr_block            = ""
+              - local_gateway_id           = ""
+              - nat_gateway_id             = "nat-099da29c653085f31"
+              - network_interface_id       = ""
+              - transit_gateway_id         = ""
+              - vpc_endpoint_id            = ""
+              - vpc_peering_connection_id  = ""
+            },
+        ] -> null
+      - tags             = {
+          - "Name" = "udacity-project-private-us-west-1b"
+        } -> null
+      - tags_all         = {
+          - "Name" = "udacity-project-private-us-west-1b"
+        } -> null
+      - vpc_id           = "vpc-050604a842317a128" -> null
+    }
+
+  # module.vpc_west.aws_route_table.public[0] will be destroyed
+  - resource "aws_route_table" "public" {
+      - arn              = "arn:aws:ec2:us-west-1:738782963780:route-table/rtb-08bcf83d48ec53f0d" -> null
+      - id               = "rtb-08bcf83d48ec53f0d" -> null
+      - owner_id         = "738782963780" -> null
+      - propagating_vgws = [] -> null
+      - route            = [
+          - {
+              - carrier_gateway_id         = ""
+              - cidr_block                 = "0.0.0.0/0"
+              - core_network_arn           = ""
+              - destination_prefix_list_id = ""
+              - egress_only_gateway_id     = ""
+              - gateway_id                 = "igw-060e565265673fc15"
+              - ipv6_cidr_block            = ""
+              - local_gateway_id           = ""
+              - nat_gateway_id             = ""
+              - network_interface_id       = ""
+              - transit_gateway_id         = ""
+              - vpc_endpoint_id            = ""
+              - vpc_peering_connection_id  = ""
+            },
+        ] -> null
+      - tags             = {
+          - "Name" = "udacity-project-public"
+        } -> null
+      - tags_all         = {
+          - "Name" = "udacity-project-public"
+        } -> null
+      - vpc_id           = "vpc-050604a842317a128" -> null
+    }
+
+  # module.vpc_west.aws_route_table_association.private[0] will be destroyed
+  - resource "aws_route_table_association" "private" {
+      - id             = "rtbassoc-0bcb71504703f1c61" -> null
+      - route_table_id = "rtb-0a16b42a91a411230" -> null
+      - subnet_id      = "subnet-01571776c1d4753b8" -> null
+    }
+
+  # module.vpc_west.aws_route_table_association.private[1] will be destroyed
+  - resource "aws_route_table_association" "private" {
+      - id             = "rtbassoc-0fc2ac813708417f1" -> null
+      - route_table_id = "rtb-050bccfbbd4d8d1c8" -> null
+      - subnet_id      = "subnet-0b3b8ed70bfc5f712" -> null
+    }
+
+  # module.vpc_west.aws_route_table_association.public[0] will be destroyed
+  - resource "aws_route_table_association" "public" {
+      - id             = "rtbassoc-0a043ec545cd7fe21" -> null
+      - route_table_id = "rtb-08bcf83d48ec53f0d" -> null
+      - subnet_id      = "subnet-0b5643c0ab20758bd" -> null
+    }
+
+  # module.vpc_west.aws_route_table_association.public[1] will be destroyed
+  - resource "aws_route_table_association" "public" {
+      - id             = "rtbassoc-03576b0abf5f8f8a1" -> null
+      - route_table_id = "rtb-08bcf83d48ec53f0d" -> null
+      - subnet_id      = "subnet-0a292cd3db84e0500" -> null
+    }
+
+  # module.vpc_west.aws_subnet.private[0] will be destroyed
+  - resource "aws_subnet" "private" {
+      - arn                                            = "arn:aws:ec2:us-west-1:738782963780:subnet/subnet-01571776c1d4753b8" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-west-1a" -> null
+      - availability_zone_id                           = "usw1-az3" -> null
+      - cidr_block                                     = "10.100.1.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-01571776c1d4753b8" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "738782963780" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Name"                            = "udacity-project-private-us-west-1a"
+          - "kubernetes.io/role/internal-elb" = "1"
+        } -> null
+      - tags_all                                       = {
+          - "Name"                            = "udacity-project-private-us-west-1a"
+          - "kubernetes.io/role/internal-elb" = "1"
+        } -> null
+      - vpc_id                                         = "vpc-050604a842317a128" -> null
+    }
+
+  # module.vpc_west.aws_subnet.private[1] will be destroyed
+  - resource "aws_subnet" "private" {
+      - arn                                            = "arn:aws:ec2:us-west-1:738782963780:subnet/subnet-0b3b8ed70bfc5f712" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-west-1b" -> null
+      - availability_zone_id                           = "usw1-az1" -> null
+      - cidr_block                                     = "10.100.2.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0b3b8ed70bfc5f712" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "738782963780" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Name"                            = "udacity-project-private-us-west-1b"
+          - "kubernetes.io/role/internal-elb" = "1"
+        } -> null
+      - tags_all                                       = {
+          - "Name"                            = "udacity-project-private-us-west-1b"
+          - "kubernetes.io/role/internal-elb" = "1"
+        } -> null
+      - vpc_id                                         = "vpc-050604a842317a128" -> null
+    }
+
+  # module.vpc_west.aws_subnet.public[0] will be destroyed
+  - resource "aws_subnet" "public" {
+      - arn                                            = "arn:aws:ec2:us-west-1:738782963780:subnet/subnet-0b5643c0ab20758bd" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-west-1a" -> null
+      - availability_zone_id                           = "usw1-az3" -> null
+      - cidr_block                                     = "10.100.10.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0b5643c0ab20758bd" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = true -> null
+      - owner_id                                       = "738782963780" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Name"                   = "udacity-project-public-us-west-1a"
+          - "kubernetes.io/role/elb" = "1"
+        } -> null
+      - tags_all                                       = {
+          - "Name"                   = "udacity-project-public-us-west-1a"
+          - "kubernetes.io/role/elb" = "1"
+        } -> null
+      - vpc_id                                         = "vpc-050604a842317a128" -> null
+    }
+
+  # module.vpc_west.aws_subnet.public[1] will be destroyed
+  - resource "aws_subnet" "public" {
+      - arn                                            = "arn:aws:ec2:us-west-1:738782963780:subnet/subnet-0a292cd3db84e0500" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-west-1b" -> null
+      - availability_zone_id                           = "usw1-az1" -> null
+      - cidr_block                                     = "10.100.11.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0a292cd3db84e0500" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = true -> null
+      - owner_id                                       = "738782963780" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Name"                   = "udacity-project-public-us-west-1b"
+          - "kubernetes.io/role/elb" = "1"
+        } -> null
+      - tags_all                                       = {
+          - "Name"                   = "udacity-project-public-us-west-1b"
+          - "kubernetes.io/role/elb" = "1"
+        } -> null
+      - vpc_id                                         = "vpc-050604a842317a128" -> null
+    }
+
+  # module.vpc_west.aws_vpc.this will be destroyed
+  - resource "aws_vpc" "this" {
+      - arn                                  = "arn:aws:ec2:us-west-1:738782963780:vpc/vpc-050604a842317a128" -> null
+      - assign_generated_ipv6_cidr_block     = false -> null
+      - cidr_block                           = "10.100.0.0/16" -> null
+      - default_network_acl_id               = "acl-0a511cab2085396b0" -> null
+      - default_route_table_id               = "rtb-0921c671fd47250bb" -> null
+      - default_security_group_id            = "sg-03a23bdd1c703c985" -> null
+      - dhcp_options_id                      = "dopt-0674e16172dc54b8c" -> null
+      - enable_dns_hostnames                 = true -> null
+      - enable_dns_support                   = true -> null
+      - enable_network_address_usage_metrics = false -> null
+      - id                                   = "vpc-050604a842317a128" -> null
+      - instance_tenancy                     = "default" -> null
+      - ipv6_netmask_length                  = 0 -> null
+      - main_route_table_id                  = "rtb-0921c671fd47250bb" -> null
+      - owner_id                             = "738782963780" -> null
+      - tags                                 = {
+          - "Name" = "udacity-project"
+        } -> null
+      - tags_all                             = {
+          - "Name" = "udacity-project"
+        } -> null
+    }
+
+Plan: 0 to add, 0 to change, 84 to destroy.
+
+Changes to Outputs:
+  - account_id         = "738782963780" -> null
+  - caller_arn         = "arn:aws:iam::738782963780:user/admin" -> null
+  - caller_user        = "AIDA2YAXFNBCKQ35UHEYW" -> null
+  - private_subnet_ids = [
+      - "subnet-01571776c1d4753b8",
+      - "subnet-0b3b8ed70bfc5f712",
+    ] -> null
+  - public_subnet_ids  = [
+      - "subnet-0b5643c0ab20758bd",
+      - "subnet-0a292cd3db84e0500",
+    ] -> null
+  - vpc_id             = "vpc-050604a842317a128" -> null
+╷
+│ Warning: Reference to undefined provider
+│ 
+│   on main.tf line 41, in module "vpc_west":
+│   41:     aws = aws.usw1
+│ 
+│ There is no explicit declaration for local provider name "aws" in module.vpc_west, so Terraform is assuming you mean to pass a configuration for "hashicorp/aws".
+│ 
+│ If you also control the child module, add a required_providers entry named "aws" with the source address "hashicorp/aws".
+│ 
+│ (and one more similar warning elsewhere)
+╵
+╷
+│ Warning: Argument is deprecated
+│ 
+│   with module.vpc.aws_eip.nat,
+│   on modules/vpc/routes.tf line 54, in resource "aws_eip" "nat":
+│   54:    vpc = true
+│ 
+│ use domain attribute instead
+│ 
+│ (and one more similar warning elsewhere)
+╵
+
+Do you really want to destroy all resources?
+  Terraform will destroy all your managed infrastructure, as shown above.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  Enter a value: yes
+
+kubernetes_namespace.udacity: Destroying... [id=udacity]
+kubernetes_service.grafana-external: Destroying... [id=monitoring/grafana-external]
+module.project_alb.aws_lb_target_group_attachment.udacity[1]: Destroying... [id=arn:aws:elasticloadbalancing:us-east-2:738782963780:targetgroup/udacity-lb-tg/6ae2213d40489dd3-20231201124534541600000005]
+module.project_alb.aws_lb_target_group_attachment.udacity[0]: Destroying... [id=arn:aws:elasticloadbalancing:us-east-2:738782963780:targetgroup/udacity-lb-tg/6ae2213d40489dd3-20231201124535037300000007]
+module.project_alb.aws_lb_target_group_attachment.udacity[2]: Destroying... [id=arn:aws:elasticloadbalancing:us-east-2:738782963780:targetgroup/udacity-lb-tg/6ae2213d40489dd3-20231201124534858200000006]
+module.project_alb.aws_lb_listener.udacity: Destroying... [id=arn:aws:elasticloadbalancing:us-east-2:738782963780:listener/app/udacity-lb-tf/90dad19a5fc3bb5a/8cf778a89bf897bd]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Destroying... [id=udacity-db-instance-0]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1]: Destroying... [id=udacity-db-instance-1]
+module.vpc_west.aws_route.public_internet_gateway[1]: Destroying... [id=r-rtb-08bcf83d48ec53f0d1080289494]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Destroying... [id=udacity-db-instance-1-s]
+module.project_alb.aws_lb_target_group_attachment.udacity[0]: Destruction complete after 1s
+module.vpc_west.aws_route_table_association.private[0]: Destroying... [id=rtbassoc-0bcb71504703f1c61]
+module.project_alb.aws_lb_target_group_attachment.udacity[2]: Destruction complete after 1s
+module.vpc_west.aws_route.public_internet_gateway[0]: Destroying... [id=r-rtb-08bcf83d48ec53f0d1080289494]
+module.project_alb.aws_lb_target_group_attachment.udacity[1]: Destruction complete after 1s
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Destroying... [id=udacity-db-instance-0-s]
+module.project_alb.aws_lb_listener.udacity: Destruction complete after 1s
+module.vpc_west.aws_route_table_association.public[1]: Destroying... [id=rtbassoc-03576b0abf5f8f8a1]
+module.vpc_west.aws_route.public_internet_gateway[0]: Destruction complete after 1s
+module.vpc_west.aws_route_table_association.public[0]: Destroying... [id=rtbassoc-0a043ec545cd7fe21]
+module.vpc_west.aws_route_table_association.private[0]: Destruction complete after 1s
+module.vpc_west.aws_route.private_nat_gateway[0]: Destroying... [id=r-rtb-0a16b42a91a4112301080289494]
+kubernetes_service.grafana-external: Destruction complete after 3s
+module.vpc_west.aws_route_table_association.private[1]: Destroying... [id=rtbassoc-0fc2ac813708417f1]
+module.vpc_west.aws_route_table_association.public[1]: Destruction complete after 1s
+module.vpc_west.aws_route.private_nat_gateway[1]: Destroying... [id=r-rtb-050bccfbbd4d8d1c81080289494]
+module.vpc_west.aws_route.public_internet_gateway[1]: Destruction complete after 2s
+module.project_ec2.aws_instance.ubuntu[2]: Destroying... [id=i-078badfab03e636a7]
+module.vpc_west.aws_route_table_association.public[0]: Destruction complete after 0s
+module.project_ec2.aws_instance.ubuntu[0]: Destroying... [id=i-02f87690ac5046baa]
+module.vpc_west.aws_route_table_association.private[1]: Destruction complete after 0s
+module.project_ec2.aws_instance.ubuntu[1]: Destroying... [id=i-0ada39ab014d55745]
+module.vpc_west.aws_route.private_nat_gateway[0]: Destruction complete after 1s
+module.project_alb.aws_lb_target_group.udacity: Destroying... [id=arn:aws:elasticloadbalancing:us-east-2:738782963780:targetgroup/udacity-lb-tg/6ae2213d40489dd3]
+module.project_alb.aws_lb_target_group.udacity: Destruction complete after 0s
+module.project_alb.aws_lb.udacity: Destroying... [id=arn:aws:elasticloadbalancing:us-east-2:738782963780:loadbalancer/app/udacity-lb-tf/90dad19a5fc3bb5a]
+module.vpc_west.aws_route.private_nat_gateway[1]: Destruction complete after 1s
+module.vpc_west.aws_route_table.public[0]: Destroying... [id=rtb-08bcf83d48ec53f0d]
+module.vpc_west.aws_route_table.public[0]: Destruction complete after 1s
+module.vpc_west.aws_nat_gateway.this[0]: Destroying... [id=nat-099da29c653085f31]
+module.project_alb.aws_lb.udacity: Destruction complete after 1s
+module.vpc_west.aws_route_table.private[0]: Destroying... [id=rtb-0a16b42a91a411230]
+module.vpc_west.aws_route_table.private[0]: Destruction complete after 1s
+module.vpc_west.aws_route_table.private[1]: Destroying... [id=rtb-050bccfbbd4d8d1c8]
+module.vpc_west.aws_route_table.private[1]: Destruction complete after 1s
+kubernetes_namespace.udacity: Destruction complete after 8s
+module.project_eks.aws_iam_role_policy_attachment.node_CloudWatchAgentServerPolicy: Destroying... [id=app-udacity-eks-node-role-20231201185325981400000006]
+module.project_eks.aws_eks_node_group.node: Destroying... [id=udacity-cluster:app-udacity-node-group]
+module.project_eks.aws_iam_role_policy_attachment.node_CloudWatchAgentServerPolicy: Destruction complete after 1s
+module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSCloudwatchPolicy: Destroying... [id=app-udacity-eks-node-role-20231201185325925900000002]
+module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSCloudwatchPolicy: Destruction complete after 0s
+module.project_eks.aws_iam_policy.eks_cluster_role_cloudwatch_policy: Destroying... [id=arn:aws:iam::738782963780:policy/app-udacity-eks-cluster-role-cloudwatch-policy]
+module.project_eks.aws_iam_policy.eks_cluster_role_cloudwatch_policy: Destruction complete after 0s
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 10s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1]: Still destroying... [id=udacity-db-instance-1, 10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 10s elapsed]
+module.project_ec2.aws_instance.ubuntu[2]: Still destroying... [id=i-078badfab03e636a7, 10s elapsed]
+module.project_ec2.aws_instance.ubuntu[0]: Still destroying... [id=i-02f87690ac5046baa, 10s elapsed]
+module.project_ec2.aws_instance.ubuntu[1]: Still destroying... [id=i-0ada39ab014d55745, 10s elapsed]
+module.project_ec2.aws_instance.ubuntu[2]: Destruction complete after 12s
+module.project_ec2.aws_instance.ubuntu[0]: Destruction complete after 12s
+module.vpc_west.aws_nat_gateway.this[0]: Still destroying... [id=nat-099da29c653085f31, 10s elapsed]
+module.project_ec2.aws_instance.ubuntu[1]: Destruction complete after 12s
+module.project_ec2.aws_security_group.ec2_sg: Destroying... [id=sg-03a83555e13a8f5d1]
+module.project_ec2.aws_security_group.ec2_sg: Destruction complete after 1s
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 10s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 20s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1]: Still destroying... [id=udacity-db-instance-1, 20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 20s elapsed]
+module.vpc_west.aws_nat_gateway.this[0]: Still destroying... [id=nat-099da29c653085f31, 20s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 20s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1]: Still destroying... [id=udacity-db-instance-1, 30s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 30s elapsed]
+module.vpc_west.aws_nat_gateway.this[0]: Still destroying... [id=nat-099da29c653085f31, 30s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 30s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 40s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1]: Still destroying... [id=udacity-db-instance-1, 40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 40s elapsed]
+module.vpc_west.aws_nat_gateway.this[0]: Still destroying... [id=nat-099da29c653085f31, 40s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 40s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 50s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1]: Still destroying... [id=udacity-db-instance-1, 50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 50s elapsed]
+module.vpc_west.aws_nat_gateway.this[0]: Still destroying... [id=nat-099da29c653085f31, 50s elapsed]
+module.vpc_west.aws_nat_gateway.this[0]: Destruction complete after 51s
+module.vpc_west.aws_internet_gateway.this[0]: Destroying... [id=igw-060e565265673fc15]
+module.vpc_west.aws_subnet.public[1]: Destroying... [id=subnet-0a292cd3db84e0500]
+module.vpc_west.aws_eip.nat[0]: Destroying... [id=eipalloc-08efd3e03f695db2d]
+module.vpc_west.aws_subnet.public[0]: Destroying... [id=subnet-0b5643c0ab20758bd]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 50s elapsed]
+module.vpc_west.aws_internet_gateway.this[0]: Destruction complete after 2s
+module.vpc_west.aws_eip.nat[0]: Destruction complete after 2s
+module.vpc_west.aws_subnet.public[1]: Destruction complete after 2s
+module.vpc_west.aws_subnet.public[0]: Destruction complete after 2s
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1]: Still destroying... [id=udacity-db-instance-1, 1m0s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 1m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 1m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 1m0s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 1m0s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 1m10s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1]: Still destroying... [id=udacity-db-instance-1, 1m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 1m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 1m10s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 1m10s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1]: Still destroying... [id=udacity-db-instance-1, 1m20s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 1m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 1m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 1m20s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 1m20s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 1m30s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1]: Still destroying... [id=udacity-db-instance-1, 1m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 1m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 1m30s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 1m30s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1]: Still destroying... [id=udacity-db-instance-1, 1m40s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 1m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 1m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 1m40s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 1m40s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1]: Still destroying... [id=udacity-db-instance-1, 1m50s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 1m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 1m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 1m50s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 1m50s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 2m0s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1]: Still destroying... [id=udacity-db-instance-1, 2m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 2m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 2m0s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 2m0s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 2m10s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1]: Still destroying... [id=udacity-db-instance-1, 2m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 2m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 2m10s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 2m10s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1]: Still destroying... [id=udacity-db-instance-1, 2m20s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 2m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 2m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 2m20s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 2m20s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1]: Still destroying... [id=udacity-db-instance-1, 2m30s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 2m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 2m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 2m30s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 2m30s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 2m40s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1]: Still destroying... [id=udacity-db-instance-1, 2m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 2m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 2m40s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 2m40s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1]: Still destroying... [id=udacity-db-instance-1, 2m50s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 2m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 2m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 2m50s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 2m50s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 3m0s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1]: Still destroying... [id=udacity-db-instance-1, 3m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 3m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 3m0s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 3m0s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 3m10s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1]: Still destroying... [id=udacity-db-instance-1, 3m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 3m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 3m10s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 3m10s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1]: Still destroying... [id=udacity-db-instance-1, 3m20s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 3m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 3m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 3m20s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 3m20s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 3m30s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1]: Still destroying... [id=udacity-db-instance-1, 3m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 3m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 3m30s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 3m30s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1]: Still destroying... [id=udacity-db-instance-1, 3m40s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 3m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 3m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 3m40s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 3m40s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 3m50s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1]: Still destroying... [id=udacity-db-instance-1, 3m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 3m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 3m50s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[1]: Destruction complete after 3m56s
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 3m50s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 4m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 4m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 4m0s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 4m0s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 4m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 4m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 4m10s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 4m10s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 4m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 4m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 4m20s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 4m20s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 4m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 4m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 4m30s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 4m30s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 4m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 4m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 4m40s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 4m40s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 4m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 4m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 4m50s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 4m50s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 5m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Still destroying... [id=udacity-db-instance-1-s, 5m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 5m0s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 5m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[1]: Destruction complete after 5m10s
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 5m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 5m10s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 5m10s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 5m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 5m20s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 5m20s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 5m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 5m30s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 5m30s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 5m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 5m40s elapsed]
+module.project_eks.aws_eks_node_group.node: Destruction complete after 5m34s
+module.project_eks.aws_iam_role_policy_attachment.node_harmony_policy_attachment: Destroying... [id=app-udacity-eks-node-role-20231201185325889900000001]
+module.project_eks.aws_iam_role_policy_attachment.node_AmazonEC2ContainerRegistryReadOnly: Destroying... [id=app-udacity-eks-node-role-20231201185326037100000008]
+module.project_eks.aws_iam_role_policy_attachment.node_AmazonEKSWorkerNodePolicy: Destroying... [id=app-udacity-eks-node-role-20231201185325954300000003]
+module.project_eks.aws_iam_role_policy_attachment.node_AmazonEKS_CNI_Policy: Destroying... [id=app-udacity-eks-node-role-20231201185325971200000005]
+module.project_eks.aws_eks_cluster.cluster: Destroying... [id=udacity-cluster]
+module.project_eks.aws_iam_role_policy_attachment.node_AmazonEKS_CNI_Policy: Destruction complete after 2s
+module.project_eks.aws_iam_role_policy_attachment.node_harmony_policy_attachment: Destruction complete after 2s
+module.project_eks.aws_iam_policy.eks_node_instance_policy: Destroying... [id=arn:aws:iam::738782963780:policy/app-udacity-instance-policy]
+module.project_eks.aws_iam_role_policy_attachment.node_AmazonEC2ContainerRegistryReadOnly: Destruction complete after 2s
+module.project_eks.aws_iam_role_policy_attachment.node_AmazonEKSWorkerNodePolicy: Destruction complete after 2s
+module.project_eks.aws_iam_role.eks_node_cluster_role: Destroying... [id=app-udacity-eks-node-role]
+module.project_eks.aws_iam_policy.eks_node_instance_policy: Destruction complete after 0s
+module.project_eks.aws_iam_role.eks_node_cluster_role: Destruction complete after 0s
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 5m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 5m50s elapsed]
+module.project_eks.aws_eks_cluster.cluster: Still destroying... [id=udacity-cluster, 10s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 6m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 6m0s elapsed]
+module.project_eks.aws_eks_cluster.cluster: Still destroying... [id=udacity-cluster, 20s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 6m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 6m10s elapsed]
+module.project_eks.aws_eks_cluster.cluster: Still destroying... [id=udacity-cluster, 30s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 6m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 6m20s elapsed]
+module.project_eks.aws_eks_cluster.cluster: Still destroying... [id=udacity-cluster, 40s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 6m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 6m30s elapsed]
+module.project_eks.aws_eks_cluster.cluster: Still destroying... [id=udacity-cluster, 50s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 6m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 6m40s elapsed]
+module.project_eks.aws_eks_cluster.cluster: Still destroying... [id=udacity-cluster, 1m0s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 6m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 6m50s elapsed]
+module.project_eks.aws_eks_cluster.cluster: Still destroying... [id=udacity-cluster, 1m10s elapsed]
+module.project_eks.aws_eks_cluster.cluster: Destruction complete after 1m16s
+module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSServicePolicy: Destroying... [id=app-udacity-eks-cluster-role-20231201185325995600000007]
+module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSClusterPolicy: Destroying... [id=app-udacity-eks-cluster-role-20231201185325965600000004]
+module.project_eks.aws_security_group.eks-cluster: Destroying... [id=sg-08385e360fc8afe97]
+module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSClusterPolicy: Destruction complete after 1s
+module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSServicePolicy: Destruction complete after 1s
+module.project_eks.aws_iam_role.eks_cluster_role: Destroying... [id=app-udacity-eks-cluster-role]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 7m0s elapsed]
+module.project_eks.aws_iam_role.eks_cluster_role: Destruction complete after 0s
+module.project_eks.aws_security_group.eks-cluster: Destruction complete after 2s
+module.vpc.aws_route_table_association.private[2]: Destroying... [id=rtbassoc-03e9ebacea5f15d27]
+module.vpc.aws_route_table_association.public[2]: Destroying... [id=rtbassoc-017e4f239e5a83d1c]
+module.vpc.aws_route_table_association.public[1]: Destroying... [id=rtbassoc-03361115a3a8ea1e1]
+module.vpc.aws_route_table_association.public[0]: Destroying... [id=rtbassoc-0fa1653caa97e5c01]
+module.vpc.aws_route.private_nat_gateway[2]: Destroying... [id=r-rtb-0d58100c3d6ff71291080289494]
+module.vpc.aws_route.private_nat_gateway[0]: Destroying... [id=r-rtb-00b102dd2512fb64c1080289494]
+module.vpc.aws_route.public_internet_gateway[1]: Destroying... [id=r-rtb-00fc5c36e3ac9826e1080289494]
+module.vpc.aws_route.public_internet_gateway[0]: Destroying... [id=r-rtb-00fc5c36e3ac9826e1080289494]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 7m0s elapsed]
+module.vpc.aws_route.public_internet_gateway[1]: Destruction complete after 0s
+module.vpc.aws_route_table_association.private[1]: Destroying... [id=rtbassoc-0105291eb8bd6ea71]
+module.vpc.aws_route_table_association.public[0]: Destruction complete after 1s
+module.vpc.aws_route.private_nat_gateway[1]: Destroying... [id=r-rtb-0be3787ee679c244a1080289494]
+module.vpc.aws_route_table_association.private[2]: Destruction complete after 1s
+module.vpc.aws_route_table_association.private[0]: Destroying... [id=rtbassoc-075397375fe639b4a]
+module.vpc.aws_route_table_association.public[2]: Destruction complete after 1s
+module.vpc.aws_route.public_internet_gateway[2]: Destroying... [id=r-rtb-00fc5c36e3ac9826e1080289494]
+module.vpc.aws_route_table_association.public[1]: Destruction complete after 1s
+module.vpc.aws_route.private_nat_gateway[0]: Destruction complete after 1s
+module.vpc.aws_route_table_association.private[1]: Destruction complete after 1s
+module.vpc.aws_route.public_internet_gateway[2]: Destruction complete after 0s
+module.vpc.aws_route.public_internet_gateway[0]: Destruction complete after 1s
+module.vpc.aws_route_table.public[0]: Destroying... [id=rtb-00fc5c36e3ac9826e]
+module.vpc.aws_route.private_nat_gateway[2]: Destruction complete after 1s
+module.vpc.aws_route_table_association.private[0]: Destruction complete after 0s
+module.vpc.aws_route.private_nat_gateway[1]: Destruction complete after 0s
+module.vpc.aws_nat_gateway.this[0]: Destroying... [id=nat-05b8923ba787edd3d]
+module.vpc.aws_route_table.private[1]: Destroying... [id=rtb-0be3787ee679c244a]
+module.vpc.aws_route_table.private[2]: Destroying... [id=rtb-0d58100c3d6ff7129]
+module.vpc.aws_route_table.private[0]: Destroying... [id=rtb-00b102dd2512fb64c]
+module.vpc.aws_route_table.public[0]: Destruction complete after 1s
+module.vpc.aws_route_table.private[1]: Destruction complete after 1s
+module.vpc.aws_route_table.private[2]: Destruction complete after 2s
+module.vpc.aws_route_table.private[0]: Destruction complete after 2s
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 7m10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 7m10s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still destroying... [id=nat-05b8923ba787edd3d, 10s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 7m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 7m20s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still destroying... [id=nat-05b8923ba787edd3d, 20s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 7m30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 7m30s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still destroying... [id=nat-05b8923ba787edd3d, 30s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 7m40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 7m40s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still destroying... [id=nat-05b8923ba787edd3d, 40s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Destruction complete after 42s
+module.vpc.aws_subnet.public[2]: Destroying... [id=subnet-0025baab002596c34]
+module.vpc.aws_internet_gateway.this[0]: Destroying... [id=igw-0d30fefbd0b3d1123]
+module.vpc.aws_subnet.public[0]: Destroying... [id=subnet-0e2308d299c5d55cc]
+module.vpc.aws_eip.nat[0]: Destroying... [id=eipalloc-0ee38f7fbe4a09b34]
+module.vpc.aws_subnet.public[1]: Destroying... [id=subnet-01dcbd3487105703f]
+module.vpc.aws_internet_gateway.this[0]: Destruction complete after 1s
+module.vpc.aws_subnet.public[1]: Destruction complete after 1s
+module.vpc.aws_eip.nat[0]: Destruction complete after 1s
+module.vpc.aws_subnet.public[0]: Destruction complete after 2s
+module.vpc.aws_subnet.public[2]: Destruction complete after 2s
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 7m50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 7m50s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Still destroying... [id=udacity-db-instance-0, 8m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 8m0s elapsed]
+module.project_rds_p.aws_rds_cluster_instance.udacity_instance[0]: Destruction complete after 8m2s
+module.project_rds_p.aws_rds_cluster.udacity_cluster: Destroying... [id=udacity-db-cluster]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 8m10s elapsed]
+module.project_rds_p.aws_rds_cluster.udacity_cluster: Still destroying... [id=udacity-db-cluster, 10s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 8m20s elapsed]
+module.project_rds_p.aws_rds_cluster.udacity_cluster: Still destroying... [id=udacity-db-cluster, 20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 8m30s elapsed]
+module.project_rds_p.aws_rds_cluster.udacity_cluster: Still destroying... [id=udacity-db-cluster, 30s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 8m40s elapsed]
+module.project_rds_p.aws_rds_cluster.udacity_cluster: Still destroying... [id=udacity-db-cluster, 40s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 8m50s elapsed]
+module.project_rds_p.aws_rds_cluster.udacity_cluster: Still destroying... [id=udacity-db-cluster, 50s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 9m0s elapsed]
+module.project_rds_p.aws_rds_cluster.udacity_cluster: Still destroying... [id=udacity-db-cluster, 1m0s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 9m10s elapsed]
+module.project_rds_p.aws_rds_cluster.udacity_cluster: Still destroying... [id=udacity-db-cluster, 1m10s elapsed]
+module.project_rds_p.aws_rds_cluster.udacity_cluster: Destruction complete after 1m12s
+module.project_rds_p.aws_rds_cluster_parameter_group.cluster_pg: Destroying... [id=udacity-pg-p]
+module.project_rds_p.aws_security_group.db_sg_1: Destroying... [id=sg-0df9c28b1c208fe3a]
+module.project_rds_p.aws_db_subnet_group.udacity_db_subnet_group: Destroying... [id=udacity_db_subnet_group]
+module.project_rds_p.aws_db_subnet_group.udacity_db_subnet_group: Destruction complete after 1s
+module.vpc.aws_subnet.private[1]: Destroying... [id=subnet-0a8c6598f06216a55]
+module.vpc.aws_subnet.private[0]: Destroying... [id=subnet-04098ca40d038bc4a]
+module.vpc.aws_subnet.private[2]: Destroying... [id=subnet-0007d7583e646f231]
+module.project_rds_p.aws_rds_cluster_parameter_group.cluster_pg: Destruction complete after 1s
+module.vpc.aws_subnet.private[2]: Destruction complete after 1s
+module.project_rds_p.aws_security_group.db_sg_1: Destruction complete after 2s
+module.vpc.aws_subnet.private[1]: Destruction complete after 1s
+module.vpc.aws_subnet.private[0]: Destruction complete after 1s
+module.vpc.aws_vpc.this: Destroying... [id=vpc-0682e35e2f25bc0dc]
+module.vpc.aws_vpc.this: Destruction complete after 1s
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Still destroying... [id=udacity-db-instance-0-s, 9m20s elapsed]
+module.project_rds_s.aws_rds_cluster_instance.udacity_instance-s[0]: Destruction complete after 9m28s
+module.project_rds_s.aws_rds_cluster.udacity_cluster-s: Destroying... [id=udacity-db-cluster-s]
+module.project_rds_s.aws_rds_cluster.udacity_cluster-s: Still destroying... [id=udacity-db-cluster-s, 10s elapsed]
+module.project_rds_s.aws_rds_cluster.udacity_cluster-s: Still destroying... [id=udacity-db-cluster-s, 20s elapsed]
+module.project_rds_s.aws_rds_cluster.udacity_cluster-s: Still destroying... [id=udacity-db-cluster-s, 30s elapsed]
+module.project_rds_s.aws_rds_cluster.udacity_cluster-s: Still destroying... [id=udacity-db-cluster-s, 40s elapsed]
+module.project_rds_s.aws_rds_cluster.udacity_cluster-s: Still destroying... [id=udacity-db-cluster-s, 50s elapsed]
+module.project_rds_s.aws_rds_cluster.udacity_cluster-s: Still destroying... [id=udacity-db-cluster-s, 1m0s elapsed]
+module.project_rds_s.aws_rds_cluster.udacity_cluster-s: Still destroying... [id=udacity-db-cluster-s, 1m10s elapsed]
+module.project_rds_s.aws_rds_cluster.udacity_cluster-s: Still destroying... [id=udacity-db-cluster-s, 1m20s elapsed]
+module.project_rds_s.aws_rds_cluster.udacity_cluster-s: Still destroying... [id=udacity-db-cluster-s, 1m30s elapsed]
+module.project_rds_s.aws_rds_cluster.udacity_cluster-s: Still destroying... [id=udacity-db-cluster-s, 1m40s elapsed]
+module.project_rds_s.aws_rds_cluster.udacity_cluster-s: Still destroying... [id=udacity-db-cluster-s, 1m50s elapsed]
+module.project_rds_s.aws_rds_cluster.udacity_cluster-s: Still destroying... [id=udacity-db-cluster-s, 2m0s elapsed]
+module.project_rds_s.aws_rds_cluster.udacity_cluster-s: Still destroying... [id=udacity-db-cluster-s, 2m10s elapsed]
+module.project_rds_s.aws_rds_cluster.udacity_cluster-s: Destruction complete after 2m13s
+module.project_rds_s.aws_db_subnet_group.udacity_db_subnet_group: Destroying... [id=udacity_db_subnet_group]
+module.project_rds_s.aws_security_group.db_sg_2: Destroying... [id=sg-085bb3bc1d16769be]
+module.project_rds_s.aws_rds_cluster_parameter_group.cluster_pg-s: Destroying... [id=udacity-pg-s]
+module.project_rds_s.aws_db_subnet_group.udacity_db_subnet_group: Destruction complete after 1s
+module.vpc_west.aws_subnet.private[0]: Destroying... [id=subnet-01571776c1d4753b8]
+module.vpc_west.aws_subnet.private[1]: Destroying... [id=subnet-0b3b8ed70bfc5f712]
+module.project_rds_s.aws_rds_cluster_parameter_group.cluster_pg-s: Destruction complete after 1s
+module.vpc_west.aws_subnet.private[1]: Destruction complete after 1s
+module.vpc_west.aws_subnet.private[0]: Destruction complete after 1s
+module.project_rds_s.aws_security_group.db_sg_2: Destruction complete after 2s
+module.vpc_west.aws_vpc.this: Destroying... [id=vpc-050604a842317a128]
+module.vpc_west.aws_vpc.this: Destruction complete after 2s
+
+Destroy complete! Resources: 84 destroyed.

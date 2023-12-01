@@ -1,0 +1,962 @@
+E1131910:zone2 stoiang$ terraform destroy
+data.terraform_remote_state.vpc: Reading...
+data.aws_iam_policy.cloudwatch-policy: Reading...
+module.project_eks.aws_iam_role_policy_attachment.node_AmazonEKSWorkerNodePolicy: Refreshing state... [id=app-udacity-eks-node-role-20231201173028879600000006]
+module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSServicePolicy: Refreshing state... [id=app-udacity-eks-cluster-role-20231201173028868400000003]
+data.aws_ami.amazon_linux_2: Reading...
+data.aws_iam_policy.instance-policy: Reading...
+module.project_eks.data.aws_iam_policy_document.eks_node_assume_role_policy: Reading...
+data.aws_iam_role.eks_node_role: Reading...
+module.project_eks.aws_iam_role_policy_attachment.node_AmazonEC2ContainerRegistryReadOnly: Refreshing state... [id=app-udacity-eks-node-role-20231201173028897400000007]
+module.project_eks.aws_iam_role_policy_attachment.node_AmazonEKS_CNI_Policy: Refreshing state... [id=app-udacity-eks-node-role-20231201173028851300000001]
+module.project_eks.data.aws_iam_policy_document.eks_node_assume_role_policy: Read complete after 0s [id=2851119427]
+module.project_eks.data.aws_iam_policy_document.eks_assume_role_policy: Reading...
+module.project_eks.data.aws_iam_policy_document.eks_assume_role_policy: Read complete after 0s [id=3552664922]
+module.project_eks.aws_iam_role_policy_attachment.node_CloudWatchAgentServerPolicy: Refreshing state... [id=app-udacity-eks-node-role-20231201173028874600000005]
+data.aws_caller_identity.current: Reading...
+data.aws_iam_role.eks_cluster_role: Reading...
+module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSClusterPolicy: Refreshing state... [id=app-udacity-eks-cluster-role-20231201173028868500000004]
+data.aws_iam_role.eks_node_role: Read complete after 1s [id=app-udacity-eks-node-role]
+data.aws_iam_role.eks_cluster_role: Read complete after 0s [id=app-udacity-eks-cluster-role]
+data.aws_caller_identity.current: Read complete after 0s [id=738782963780]
+data.aws_ami.amazon_linux_2: Read complete after 1s [id=ami-0839bf007aad25236]
+data.terraform_remote_state.vpc: Read complete after 2s
+module.project_eks.aws_security_group.eks-cluster: Refreshing state... [id=sg-0881df0029643816b]
+module.project_alb.aws_lb_target_group.udacity: Refreshing state... [id=arn:aws:elasticloadbalancing:us-west-1:738782963780:targetgroup/udacity-lb-tg/4b95089d514211b5]
+module.project_ec2.aws_security_group.ec2_sg: Refreshing state... [id=sg-0f181054b7ac3d00b]
+module.project_eks.aws_eks_cluster.cluster: Refreshing state... [id=udacity-cluster]
+module.project_alb.aws_lb.udacity: Refreshing state... [id=arn:aws:elasticloadbalancing:us-west-1:738782963780:loadbalancer/app/udacity-lb-tf/ba1551749185931f]
+module.project_ec2.aws_instance.ubuntu[2]: Refreshing state... [id=i-0d23fa14e9383d06a]
+module.project_ec2.aws_instance.ubuntu[1]: Refreshing state... [id=i-01c4804370789911d]
+module.project_ec2.aws_instance.ubuntu[0]: Refreshing state... [id=i-0c5109defc4db7d85]
+data.aws_eks_cluster_auth.cluster: Reading...
+data.aws_eks_cluster.cluster: Reading...
+data.aws_eks_cluster_auth.cluster: Read complete after 0s [id=udacity-cluster]
+data.aws_eks_cluster.cluster: Read complete after 0s [id=udacity-cluster]
+module.project_alb.aws_lb_listener.udacity: Refreshing state... [id=arn:aws:elasticloadbalancing:us-west-1:738782963780:listener/app/udacity-lb-tf/ba1551749185931f/a4ab0a1e851c072e]
+data.aws_iam_policy.instance-policy: Read complete after 3s [id=arn:aws:iam::738782963780:policy/app-udacity-instance-policy]
+module.project_eks.aws_iam_role_policy_attachment.node_harmony_policy_attachment: Refreshing state... [id=app-udacity-eks-node-role-20231201173029147500000008]
+data.aws_iam_policy.cloudwatch-policy: Read complete after 3s [id=arn:aws:iam::738782963780:policy/app-udacity-eks-cluster-role-cloudwatch-policy]
+module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSCloudwatchPolicy: Refreshing state... [id=app-udacity-eks-node-role-20231201173028863200000002]
+module.project_eks.aws_eks_node_group.node: Refreshing state... [id=udacity-cluster:app-udacity-node-group]
+kubernetes_namespace.udacity: Refreshing state... [id=udacity]
+kubernetes_service.grafana-external: Refreshing state... [id=monitoring/grafana-external]
+module.project_alb.aws_lb_target_group_attachment.udacity[2]: Refreshing state... [id=arn:aws:elasticloadbalancing:us-west-1:738782963780:targetgroup/udacity-lb-tg/4b95089d514211b5-2023120117304825440000000d]
+module.project_alb.aws_lb_target_group_attachment.udacity[1]: Refreshing state... [id=arn:aws:elasticloadbalancing:us-west-1:738782963780:targetgroup/udacity-lb-tg/4b95089d514211b5-2023120117304788970000000c]
+module.project_alb.aws_lb_target_group_attachment.udacity[0]: Refreshing state... [id=arn:aws:elasticloadbalancing:us-west-1:738782963780:targetgroup/udacity-lb-tg/4b95089d514211b5-2023120117304843980000000e]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # kubernetes_namespace.udacity will be destroyed
+  - resource "kubernetes_namespace" "udacity" {
+      - id                               = "udacity" -> null
+      - wait_for_default_service_account = false -> null
+
+      - metadata {
+          - annotations      = {} -> null
+          - generation       = 0 -> null
+          - labels           = {} -> null
+          - name             = "udacity" -> null
+          - resource_version = "1371" -> null
+          - uid              = "0ce7fc1b-2f1c-4871-a736-d3b90567f2a7" -> null
+        }
+    }
+
+  # kubernetes_service.grafana-external will be destroyed
+  - resource "kubernetes_service" "grafana-external" {
+      - id                     = "monitoring/grafana-external" -> null
+      - status                 = [
+          - {
+              - load_balancer = [
+                  - {
+                      - ingress = [
+                          - {
+                              - hostname = "a197e17b1b8dd4278bd667d5728553a9-998f8348fc3cc7bc.elb.us-west-1.amazonaws.com"
+                              - ip       = ""
+                            },
+                        ]
+                    },
+                ]
+            },
+        ] -> null
+      - wait_for_load_balancer = true -> null
+
+      - metadata {
+          - annotations      = {
+              - "service.beta.kubernetes.io/aws-load-balancer-nlb-target-type" = "ip"
+              - "service.beta.kubernetes.io/aws-load-balancer-type"            = "nlb"
+            } -> null
+          - generation       = 0 -> null
+          - labels           = {} -> null
+          - name             = "grafana-external" -> null
+          - namespace        = "monitoring" -> null
+          - resource_version = "3680" -> null
+          - uid              = "197e17b1-b8dd-4278-bd66-7d5728553a92" -> null
+        }
+
+      - spec {
+          - allocate_load_balancer_node_ports = true -> null
+          - cluster_ip                        = "172.20.72.66" -> null
+          - cluster_ips                       = [
+              - "172.20.72.66",
+            ] -> null
+          - external_ips                      = [] -> null
+          - external_traffic_policy           = "Cluster" -> null
+          - health_check_node_port            = 0 -> null
+          - internal_traffic_policy           = "Cluster" -> null
+          - ip_families                       = [
+              - "IPv4",
+            ] -> null
+          - ip_family_policy                  = "SingleStack" -> null
+          - load_balancer_source_ranges       = [] -> null
+          - publish_not_ready_addresses       = false -> null
+          - selector                          = {
+              - "app.kubernetes.io/name" = "grafana"
+            } -> null
+          - session_affinity                  = "None" -> null
+          - type                              = "LoadBalancer" -> null
+
+          - port {
+              - node_port   = 32256 -> null
+              - port        = 80 -> null
+              - protocol    = "TCP" -> null
+              - target_port = "3000" -> null
+            }
+        }
+    }
+
+  # module.project_alb.aws_lb.udacity will be destroyed
+  - resource "aws_lb" "udacity" {
+      - arn                                         = "arn:aws:elasticloadbalancing:us-west-1:738782963780:loadbalancer/app/udacity-lb-tf/ba1551749185931f" -> null
+      - arn_suffix                                  = "app/udacity-lb-tf/ba1551749185931f" -> null
+      - desync_mitigation_mode                      = "defensive" -> null
+      - dns_name                                    = "udacity-lb-tf-2032913759.us-west-1.elb.amazonaws.com" -> null
+      - drop_invalid_header_fields                  = false -> null
+      - enable_cross_zone_load_balancing            = true -> null
+      - enable_deletion_protection                  = false -> null
+      - enable_http2                                = true -> null
+      - enable_tls_version_and_cipher_suite_headers = false -> null
+      - enable_waf_fail_open                        = false -> null
+      - enable_xff_client_port                      = false -> null
+      - id                                          = "arn:aws:elasticloadbalancing:us-west-1:738782963780:loadbalancer/app/udacity-lb-tf/ba1551749185931f" -> null
+      - idle_timeout                                = 60 -> null
+      - internal                                    = false -> null
+      - ip_address_type                             = "ipv4" -> null
+      - load_balancer_type                          = "application" -> null
+      - name                                        = "udacity-lb-tf" -> null
+      - preserve_host_header                        = false -> null
+      - security_groups                             = [
+          - "sg-0f181054b7ac3d00b",
+        ] -> null
+      - subnets                                     = [
+          - "subnet-0a292cd3db84e0500",
+          - "subnet-0b5643c0ab20758bd",
+        ] -> null
+      - tags                                        = {} -> null
+      - tags_all                                    = {
+          - "Name"      = "udacity"
+          - "Terraform" = "true"
+        } -> null
+      - vpc_id                                      = "vpc-050604a842317a128" -> null
+      - xff_header_processing_mode                  = "append" -> null
+      - zone_id                                     = "Z368ELLRRE2KJ0" -> null
+
+      - access_logs {
+          - enabled = false -> null
+        }
+
+      - subnet_mapping {
+          - subnet_id = "subnet-0a292cd3db84e0500" -> null
+        }
+      - subnet_mapping {
+          - subnet_id = "subnet-0b5643c0ab20758bd" -> null
+        }
+    }
+
+  # module.project_alb.aws_lb_listener.udacity will be destroyed
+  - resource "aws_lb_listener" "udacity" {
+      - arn               = "arn:aws:elasticloadbalancing:us-west-1:738782963780:listener/app/udacity-lb-tf/ba1551749185931f/a4ab0a1e851c072e" -> null
+      - id                = "arn:aws:elasticloadbalancing:us-west-1:738782963780:listener/app/udacity-lb-tf/ba1551749185931f/a4ab0a1e851c072e" -> null
+      - load_balancer_arn = "arn:aws:elasticloadbalancing:us-west-1:738782963780:loadbalancer/app/udacity-lb-tf/ba1551749185931f" -> null
+      - port              = 80 -> null
+      - protocol          = "HTTP" -> null
+      - tags              = {} -> null
+      - tags_all          = {
+          - "Name"      = "udacity"
+          - "Terraform" = "true"
+        } -> null
+
+      - default_action {
+          - order            = 1 -> null
+          - target_group_arn = "arn:aws:elasticloadbalancing:us-west-1:738782963780:targetgroup/udacity-lb-tg/4b95089d514211b5" -> null
+          - type             = "forward" -> null
+        }
+    }
+
+  # module.project_alb.aws_lb_target_group.udacity will be destroyed
+  - resource "aws_lb_target_group" "udacity" {
+      - arn                                = "arn:aws:elasticloadbalancing:us-west-1:738782963780:targetgroup/udacity-lb-tg/4b95089d514211b5" -> null
+      - arn_suffix                         = "targetgroup/udacity-lb-tg/4b95089d514211b5" -> null
+      - deregistration_delay               = "300" -> null
+      - id                                 = "arn:aws:elasticloadbalancing:us-west-1:738782963780:targetgroup/udacity-lb-tg/4b95089d514211b5" -> null
+      - ip_address_type                    = "ipv4" -> null
+      - lambda_multi_value_headers_enabled = false -> null
+      - load_balancing_algorithm_type      = "round_robin" -> null
+      - load_balancing_cross_zone_enabled  = "use_load_balancer_configuration" -> null
+      - name                               = "udacity-lb-tg" -> null
+      - port                               = 80 -> null
+      - protocol                           = "HTTP" -> null
+      - protocol_version                   = "HTTP1" -> null
+      - proxy_protocol_v2                  = false -> null
+      - slow_start                         = 0 -> null
+      - tags                               = {} -> null
+      - tags_all                           = {
+          - "Name"      = "udacity"
+          - "Terraform" = "true"
+        } -> null
+      - target_type                        = "instance" -> null
+      - vpc_id                             = "vpc-050604a842317a128" -> null
+
+      - health_check {
+          - enabled             = true -> null
+          - healthy_threshold   = 5 -> null
+          - interval            = 30 -> null
+          - matcher             = "200" -> null
+          - path                = "/" -> null
+          - port                = "traffic-port" -> null
+          - protocol            = "HTTP" -> null
+          - timeout             = 5 -> null
+          - unhealthy_threshold = 2 -> null
+        }
+
+      - stickiness {
+          - cookie_duration = 86400 -> null
+          - enabled         = false -> null
+          - type            = "lb_cookie" -> null
+        }
+
+      - target_failover {}
+
+      - target_health_state {}
+    }
+
+  # module.project_alb.aws_lb_target_group_attachment.udacity[0] will be destroyed
+  - resource "aws_lb_target_group_attachment" "udacity" {
+      - id               = "arn:aws:elasticloadbalancing:us-west-1:738782963780:targetgroup/udacity-lb-tg/4b95089d514211b5-2023120117304843980000000e" -> null
+      - port             = 80 -> null
+      - target_group_arn = "arn:aws:elasticloadbalancing:us-west-1:738782963780:targetgroup/udacity-lb-tg/4b95089d514211b5" -> null
+      - target_id        = "i-0c5109defc4db7d85" -> null
+    }
+
+  # module.project_alb.aws_lb_target_group_attachment.udacity[1] will be destroyed
+  - resource "aws_lb_target_group_attachment" "udacity" {
+      - id               = "arn:aws:elasticloadbalancing:us-west-1:738782963780:targetgroup/udacity-lb-tg/4b95089d514211b5-2023120117304788970000000c" -> null
+      - port             = 80 -> null
+      - target_group_arn = "arn:aws:elasticloadbalancing:us-west-1:738782963780:targetgroup/udacity-lb-tg/4b95089d514211b5" -> null
+      - target_id        = "i-01c4804370789911d" -> null
+    }
+
+  # module.project_alb.aws_lb_target_group_attachment.udacity[2] will be destroyed
+  - resource "aws_lb_target_group_attachment" "udacity" {
+      - id               = "arn:aws:elasticloadbalancing:us-west-1:738782963780:targetgroup/udacity-lb-tg/4b95089d514211b5-2023120117304825440000000d" -> null
+      - port             = 80 -> null
+      - target_group_arn = "arn:aws:elasticloadbalancing:us-west-1:738782963780:targetgroup/udacity-lb-tg/4b95089d514211b5" -> null
+      - target_id        = "i-0d23fa14e9383d06a" -> null
+    }
+
+  # module.project_ec2.aws_instance.ubuntu[0] will be destroyed
+  - resource "aws_instance" "ubuntu" {
+      - ami                                  = "ami-001361966fc765212" -> null
+      - arn                                  = "arn:aws:ec2:us-west-1:738782963780:instance/i-0c5109defc4db7d85" -> null
+      - associate_public_ip_address          = true -> null
+      - availability_zone                    = "us-west-1a" -> null
+      - cpu_core_count                       = 1 -> null
+      - cpu_threads_per_core                 = 2 -> null
+      - disable_api_stop                     = false -> null
+      - disable_api_termination              = false -> null
+      - ebs_optimized                        = false -> null
+      - get_password_data                    = false -> null
+      - hibernation                          = false -> null
+      - id                                   = "i-0c5109defc4db7d85" -> null
+      - instance_initiated_shutdown_behavior = "stop" -> null
+      - instance_state                       = "running" -> null
+      - instance_type                        = "t3.micro" -> null
+      - ipv6_address_count                   = 0 -> null
+      - ipv6_addresses                       = [] -> null
+      - key_name                             = "udacity" -> null
+      - monitoring                           = false -> null
+      - placement_partition_number           = 0 -> null
+      - primary_network_interface_id         = "eni-0408ded9647994603" -> null
+      - private_dns                          = "ip-10-100-10-184.us-west-1.compute.internal" -> null
+      - private_ip                           = "10.100.10.184" -> null
+      - public_dns                           = "ec2-54-215-222-35.us-west-1.compute.amazonaws.com" -> null
+      - public_ip                            = "54.215.222.35" -> null
+      - secondary_private_ips                = [] -> null
+      - security_groups                      = [] -> null
+      - source_dest_check                    = true -> null
+      - subnet_id                            = "subnet-0b5643c0ab20758bd" -> null
+      - tags                                 = {
+          - "Name" = "Ubuntu-Web"
+        } -> null
+      - tags_all                             = {
+          - "Name"      = "Ubuntu-Web"
+          - "Terraform" = "true"
+        } -> null
+      - tenancy                              = "default" -> null
+      - user_data_replace_on_change          = false -> null
+      - vpc_security_group_ids               = [
+          - "sg-0f181054b7ac3d00b",
+        ] -> null
+
+      - capacity_reservation_specification {
+          - capacity_reservation_preference = "open" -> null
+        }
+
+      - cpu_options {
+          - core_count       = 1 -> null
+          - threads_per_core = 2 -> null
+        }
+
+      - credit_specification {
+          - cpu_credits = "unlimited" -> null
+        }
+
+      - enclave_options {
+          - enabled = false -> null
+        }
+
+      - maintenance_options {
+          - auto_recovery = "default" -> null
+        }
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_protocol_ipv6          = "disabled" -> null
+          - http_put_response_hop_limit = 1 -> null
+          - http_tokens                 = "optional" -> null
+          - instance_metadata_tags      = "disabled" -> null
+        }
+
+      - private_dns_name_options {
+          - enable_resource_name_dns_a_record    = false -> null
+          - enable_resource_name_dns_aaaa_record = false -> null
+          - hostname_type                        = "ip-name" -> null
+        }
+
+      - root_block_device {
+          - delete_on_termination = true -> null
+          - device_name           = "/dev/sda1" -> null
+          - encrypted             = false -> null
+          - iops                  = 100 -> null
+          - tags                  = {} -> null
+          - throughput            = 0 -> null
+          - volume_id             = "vol-0a09cf7bfe70b8f07" -> null
+          - volume_size           = 8 -> null
+          - volume_type           = "gp2" -> null
+        }
+    }
+
+  # module.project_ec2.aws_instance.ubuntu[1] will be destroyed
+  - resource "aws_instance" "ubuntu" {
+      - ami                                  = "ami-001361966fc765212" -> null
+      - arn                                  = "arn:aws:ec2:us-west-1:738782963780:instance/i-01c4804370789911d" -> null
+      - associate_public_ip_address          = true -> null
+      - availability_zone                    = "us-west-1b" -> null
+      - cpu_core_count                       = 1 -> null
+      - cpu_threads_per_core                 = 2 -> null
+      - disable_api_stop                     = false -> null
+      - disable_api_termination              = false -> null
+      - ebs_optimized                        = false -> null
+      - get_password_data                    = false -> null
+      - hibernation                          = false -> null
+      - id                                   = "i-01c4804370789911d" -> null
+      - instance_initiated_shutdown_behavior = "stop" -> null
+      - instance_state                       = "running" -> null
+      - instance_type                        = "t3.micro" -> null
+      - ipv6_address_count                   = 0 -> null
+      - ipv6_addresses                       = [] -> null
+      - key_name                             = "udacity" -> null
+      - monitoring                           = false -> null
+      - placement_partition_number           = 0 -> null
+      - primary_network_interface_id         = "eni-06af52990f095fd3b" -> null
+      - private_dns                          = "ip-10-100-11-105.us-west-1.compute.internal" -> null
+      - private_ip                           = "10.100.11.105" -> null
+      - public_dns                           = "ec2-54-151-25-22.us-west-1.compute.amazonaws.com" -> null
+      - public_ip                            = "54.151.25.22" -> null
+      - secondary_private_ips                = [] -> null
+      - security_groups                      = [] -> null
+      - source_dest_check                    = true -> null
+      - subnet_id                            = "subnet-0a292cd3db84e0500" -> null
+      - tags                                 = {
+          - "Name" = "Ubuntu-Web"
+        } -> null
+      - tags_all                             = {
+          - "Name"      = "Ubuntu-Web"
+          - "Terraform" = "true"
+        } -> null
+      - tenancy                              = "default" -> null
+      - user_data_replace_on_change          = false -> null
+      - vpc_security_group_ids               = [
+          - "sg-0f181054b7ac3d00b",
+        ] -> null
+
+      - capacity_reservation_specification {
+          - capacity_reservation_preference = "open" -> null
+        }
+
+      - cpu_options {
+          - core_count       = 1 -> null
+          - threads_per_core = 2 -> null
+        }
+
+      - credit_specification {
+          - cpu_credits = "unlimited" -> null
+        }
+
+      - enclave_options {
+          - enabled = false -> null
+        }
+
+      - maintenance_options {
+          - auto_recovery = "default" -> null
+        }
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_protocol_ipv6          = "disabled" -> null
+          - http_put_response_hop_limit = 1 -> null
+          - http_tokens                 = "optional" -> null
+          - instance_metadata_tags      = "disabled" -> null
+        }
+
+      - private_dns_name_options {
+          - enable_resource_name_dns_a_record    = false -> null
+          - enable_resource_name_dns_aaaa_record = false -> null
+          - hostname_type                        = "ip-name" -> null
+        }
+
+      - root_block_device {
+          - delete_on_termination = true -> null
+          - device_name           = "/dev/sda1" -> null
+          - encrypted             = false -> null
+          - iops                  = 100 -> null
+          - tags                  = {} -> null
+          - throughput            = 0 -> null
+          - volume_id             = "vol-06f6622f777f59033" -> null
+          - volume_size           = 8 -> null
+          - volume_type           = "gp2" -> null
+        }
+    }
+
+  # module.project_ec2.aws_instance.ubuntu[2] will be destroyed
+  - resource "aws_instance" "ubuntu" {
+      - ami                                  = "ami-001361966fc765212" -> null
+      - arn                                  = "arn:aws:ec2:us-west-1:738782963780:instance/i-0d23fa14e9383d06a" -> null
+      - associate_public_ip_address          = true -> null
+      - availability_zone                    = "us-west-1a" -> null
+      - cpu_core_count                       = 1 -> null
+      - cpu_threads_per_core                 = 2 -> null
+      - disable_api_stop                     = false -> null
+      - disable_api_termination              = false -> null
+      - ebs_optimized                        = false -> null
+      - get_password_data                    = false -> null
+      - hibernation                          = false -> null
+      - id                                   = "i-0d23fa14e9383d06a" -> null
+      - instance_initiated_shutdown_behavior = "stop" -> null
+      - instance_state                       = "running" -> null
+      - instance_type                        = "t3.micro" -> null
+      - ipv6_address_count                   = 0 -> null
+      - ipv6_addresses                       = [] -> null
+      - key_name                             = "udacity" -> null
+      - monitoring                           = false -> null
+      - placement_partition_number           = 0 -> null
+      - primary_network_interface_id         = "eni-08e081f453900750d" -> null
+      - private_dns                          = "ip-10-100-10-228.us-west-1.compute.internal" -> null
+      - private_ip                           = "10.100.10.228" -> null
+      - public_dns                           = "ec2-3-101-140-233.us-west-1.compute.amazonaws.com" -> null
+      - public_ip                            = "3.101.140.233" -> null
+      - secondary_private_ips                = [] -> null
+      - security_groups                      = [] -> null
+      - source_dest_check                    = true -> null
+      - subnet_id                            = "subnet-0b5643c0ab20758bd" -> null
+      - tags                                 = {
+          - "Name" = "Ubuntu-Web"
+        } -> null
+      - tags_all                             = {
+          - "Name"      = "Ubuntu-Web"
+          - "Terraform" = "true"
+        } -> null
+      - tenancy                              = "default" -> null
+      - user_data_replace_on_change          = false -> null
+      - vpc_security_group_ids               = [
+          - "sg-0f181054b7ac3d00b",
+        ] -> null
+
+      - capacity_reservation_specification {
+          - capacity_reservation_preference = "open" -> null
+        }
+
+      - cpu_options {
+          - core_count       = 1 -> null
+          - threads_per_core = 2 -> null
+        }
+
+      - credit_specification {
+          - cpu_credits = "unlimited" -> null
+        }
+
+      - enclave_options {
+          - enabled = false -> null
+        }
+
+      - maintenance_options {
+          - auto_recovery = "default" -> null
+        }
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_protocol_ipv6          = "disabled" -> null
+          - http_put_response_hop_limit = 1 -> null
+          - http_tokens                 = "optional" -> null
+          - instance_metadata_tags      = "disabled" -> null
+        }
+
+      - private_dns_name_options {
+          - enable_resource_name_dns_a_record    = false -> null
+          - enable_resource_name_dns_aaaa_record = false -> null
+          - hostname_type                        = "ip-name" -> null
+        }
+
+      - root_block_device {
+          - delete_on_termination = true -> null
+          - device_name           = "/dev/sda1" -> null
+          - encrypted             = false -> null
+          - iops                  = 100 -> null
+          - tags                  = {} -> null
+          - throughput            = 0 -> null
+          - volume_id             = "vol-06b9fcf63339eb834" -> null
+          - volume_size           = 8 -> null
+          - volume_type           = "gp2" -> null
+        }
+    }
+
+  # module.project_ec2.aws_security_group.ec2_sg will be destroyed
+  - resource "aws_security_group" "ec2_sg" {
+      - arn                    = "arn:aws:ec2:us-west-1:738782963780:security-group/sg-0f181054b7ac3d00b" -> null
+      - description            = "Managed by Terraform" -> null
+      - egress                 = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = ""
+              - from_port        = 0
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "-1"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 0
+            },
+        ] -> null
+      - id                     = "sg-0f181054b7ac3d00b" -> null
+      - ingress                = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = "monitoring"
+              - from_port        = 9100
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 9100
+            },
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = "ssh port"
+              - from_port        = 22
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 22
+            },
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = "web port"
+              - from_port        = 80
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 80
+            },
+        ] -> null
+      - name                   = "ec2_sg" -> null
+      - owner_id               = "738782963780" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {
+          - "Name" = "ec2_sg"
+        } -> null
+      - tags_all               = {
+          - "Name"      = "ec2_sg"
+          - "Terraform" = "true"
+        } -> null
+      - vpc_id                 = "vpc-050604a842317a128" -> null
+    }
+
+  # module.project_eks.aws_eks_cluster.cluster will be destroyed
+  - resource "aws_eks_cluster" "cluster" {
+      - arn                       = "arn:aws:eks:us-west-1:738782963780:cluster/udacity-cluster" -> null
+      - certificate_authority     = [
+          - {
+              - data = "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1USXdNVEUzTXpRMU1Gb1hEVE16TVRFeU9ERTNNelExTUZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTVBsCjA3a2hwemlPcXc4d0lhSEk0aTlPTzdvYWRSS21teDJuZkNleHdMejJQVXBmaWI1alo5aUxORFJOVXY3TmN1bTAKUm9PaVZveC8wNGVIL0I5c092emxha3lGalFjNHVxd2M4a3Q4Y2tMUHlZTWdjOWd5NDFMSVp5MVJaaWl3cURLbAp3OU9BUTlMZjB6VGdVMGl4ZndzaWRhUDRudEdRUFphc1Q0TDdCVTlrdkNobWdoMGpORHNjR0xiekJTMVRJZXFUCk9rNVllaE9INmVMdHNXdExaZzF1Z2plcXBEc04wQVV0UFNpNDNHRFJEZ1J3d2tHdkRSb281dGcwV0UweTdvM3MKS0xBdlg1bEFFZ0s0bkNOM0dJRHI2L0pKSFhUTFQ5ZHFWelJPSXRtWVNGbXM3dzZveWJWbHhlT0pKbnFKZG5jVAprYXFNSmMzK0lxcVBJWFVsMW4wQ0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZJU0tRYm1FcGJIN0diUU5tQWlLRnBwM1Mrek1NQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSUFIVk9MSnhCUGVoRURDQU5tSApqQUVoYmZERmFOTDcxQnBaZDM2NFpXbnFPemJLR3ZNMUx4MlJFcUVwa2JkODFlREZZS3Vzb3M4QXBmQ1lmdnFDCmN1R0J5bDZPdjI3WUhrdjlJeTR6YjhlS3h2cXovcWhtYjYwbTB2SEhRb0ZrazVlY2E4UVNicmFlSnh2UmRITk0KOGZicU56Yk9WNnBRUDEzM1pPeklsaGtRanUrdXozVjhQTzdOdTJlM3FqMFl4MmF6aWJUWjB6NHdvUUlwa1l4QwpYSWNya05VdXlrVXZsZUlKclN1VGErMXBROTZNNjlmeEdkL3ppellqRFYrSzNTTWhiQXh4eUNzNUhBWlJkRVYwCk40YVdGZVIxWWpCblF2a0JWYWNPNEt0RkJvb3hTMFpKNTRhWmkwVWx0VHJkWlFyUzhxTHk0LzlRWC9KQkt4UG4KczVZPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg=="
+            },
+        ] -> null
+      - created_at                = "2023-12-01 17:30:34.631 +0000 UTC" -> null
+      - enabled_cluster_log_types = [] -> null
+      - endpoint                  = "https://19A96D7559F63A29BCA102E21CC815A4.yl4.us-west-1.eks.amazonaws.com" -> null
+      - id                        = "udacity-cluster" -> null
+      - identity                  = [
+          - {
+              - oidc = [
+                  - {
+                      - issuer = "https://oidc.eks.us-west-1.amazonaws.com/id/19A96D7559F63A29BCA102E21CC815A4"
+                    },
+                ]
+            },
+        ] -> null
+      - name                      = "udacity-cluster" -> null
+      - platform_version          = "eks.15" -> null
+      - role_arn                  = "arn:aws:iam::738782963780:role/app-udacity-eks-cluster-role" -> null
+      - status                    = "ACTIVE" -> null
+      - tags                      = {} -> null
+      - tags_all                  = {
+          - "Name"      = "udacity"
+          - "Terraform" = "true"
+        } -> null
+      - version                   = "1.23" -> null
+
+      - kubernetes_network_config {
+          - ip_family         = "ipv4" -> null
+          - service_ipv4_cidr = "172.20.0.0/16" -> null
+        }
+
+      - vpc_config {
+          - cluster_security_group_id = "sg-01533279cc318fab2" -> null
+          - endpoint_private_access   = false -> null
+          - endpoint_public_access    = true -> null
+          - public_access_cidrs       = [
+              - "0.0.0.0/0",
+            ] -> null
+          - security_group_ids        = [
+              - "sg-0881df0029643816b",
+            ] -> null
+          - subnet_ids                = [
+              - "subnet-01571776c1d4753b8",
+              - "subnet-0b3b8ed70bfc5f712",
+            ] -> null
+          - vpc_id                    = "vpc-050604a842317a128" -> null
+        }
+    }
+
+  # module.project_eks.aws_eks_node_group.node will be destroyed
+  - resource "aws_eks_node_group" "node" {
+      - ami_type        = "AL2_x86_64" -> null
+      - arn             = "arn:aws:eks:us-west-1:738782963780:nodegroup/udacity-cluster/app-udacity-node-group/90c6133a-5e93-fd70-cb16-2f73ecc85ab3" -> null
+      - capacity_type   = "ON_DEMAND" -> null
+      - cluster_name    = "udacity-cluster" -> null
+      - disk_size       = 20 -> null
+      - id              = "udacity-cluster:app-udacity-node-group" -> null
+      - instance_types  = [
+          - "t3.medium",
+        ] -> null
+      - labels          = {} -> null
+      - node_group_name = "app-udacity-node-group" -> null
+      - node_role_arn   = "arn:aws:iam::738782963780:role/app-udacity-eks-node-role" -> null
+      - release_version = "1.23.17-20231116" -> null
+      - resources       = [
+          - {
+              - autoscaling_groups              = [
+                  - {
+                      - name = "eks-app-udacity-node-group-90c6133a-5e93-fd70-cb16-2f73ecc85ab3"
+                    },
+                ]
+              - remote_access_security_group_id = ""
+            },
+        ] -> null
+      - status          = "ACTIVE" -> null
+      - subnet_ids      = [
+          - "subnet-01571776c1d4753b8",
+          - "subnet-0b3b8ed70bfc5f712",
+        ] -> null
+      - tags            = {
+          - "Name" = "eks-udacity-nodes"
+        } -> null
+      - tags_all        = {
+          - "Name"      = "eks-udacity-nodes"
+          - "Terraform" = "true"
+        } -> null
+      - version         = "1.23" -> null
+
+      - scaling_config {
+          - desired_size = 2 -> null
+          - max_size     = 2 -> null
+          - min_size     = 2 -> null
+        }
+
+      - update_config {
+          - max_unavailable            = 1 -> null
+          - max_unavailable_percentage = 0 -> null
+        }
+    }
+
+  # module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSCloudwatchPolicy will be destroyed
+  - resource "aws_iam_role_policy_attachment" "cluster_AmazonEKSCloudwatchPolicy" {
+      - id         = "app-udacity-eks-node-role-20231201173028863200000002" -> null
+      - policy_arn = "arn:aws:iam::738782963780:policy/app-udacity-eks-cluster-role-cloudwatch-policy" -> null
+      - role       = "app-udacity-eks-node-role" -> null
+    }
+
+  # module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSClusterPolicy will be destroyed
+  - resource "aws_iam_role_policy_attachment" "cluster_AmazonEKSClusterPolicy" {
+      - id         = "app-udacity-eks-cluster-role-20231201173028868500000004" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy" -> null
+      - role       = "app-udacity-eks-cluster-role" -> null
+    }
+
+  # module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSServicePolicy will be destroyed
+  - resource "aws_iam_role_policy_attachment" "cluster_AmazonEKSServicePolicy" {
+      - id         = "app-udacity-eks-cluster-role-20231201173028868400000003" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEKSServicePolicy" -> null
+      - role       = "app-udacity-eks-cluster-role" -> null
+    }
+
+  # module.project_eks.aws_iam_role_policy_attachment.node_AmazonEC2ContainerRegistryReadOnly will be destroyed
+  - resource "aws_iam_role_policy_attachment" "node_AmazonEC2ContainerRegistryReadOnly" {
+      - id         = "app-udacity-eks-node-role-20231201173028897400000007" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly" -> null
+      - role       = "app-udacity-eks-node-role" -> null
+    }
+
+  # module.project_eks.aws_iam_role_policy_attachment.node_AmazonEKSWorkerNodePolicy will be destroyed
+  - resource "aws_iam_role_policy_attachment" "node_AmazonEKSWorkerNodePolicy" {
+      - id         = "app-udacity-eks-node-role-20231201173028879600000006" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy" -> null
+      - role       = "app-udacity-eks-node-role" -> null
+    }
+
+  # module.project_eks.aws_iam_role_policy_attachment.node_AmazonEKS_CNI_Policy will be destroyed
+  - resource "aws_iam_role_policy_attachment" "node_AmazonEKS_CNI_Policy" {
+      - id         = "app-udacity-eks-node-role-20231201173028851300000001" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy" -> null
+      - role       = "app-udacity-eks-node-role" -> null
+    }
+
+  # module.project_eks.aws_iam_role_policy_attachment.node_CloudWatchAgentServerPolicy will be destroyed
+  - resource "aws_iam_role_policy_attachment" "node_CloudWatchAgentServerPolicy" {
+      - id         = "app-udacity-eks-node-role-20231201173028874600000005" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy" -> null
+      - role       = "app-udacity-eks-node-role" -> null
+    }
+
+  # module.project_eks.aws_iam_role_policy_attachment.node_harmony_policy_attachment will be destroyed
+  - resource "aws_iam_role_policy_attachment" "node_harmony_policy_attachment" {
+      - id         = "app-udacity-eks-node-role-20231201173029147500000008" -> null
+      - policy_arn = "arn:aws:iam::738782963780:policy/app-udacity-instance-policy" -> null
+      - role       = "app-udacity-eks-node-role" -> null
+    }
+
+  # module.project_eks.aws_security_group.eks-cluster will be destroyed
+  - resource "aws_security_group" "eks-cluster" {
+      - arn                    = "arn:aws:ec2:us-west-1:738782963780:security-group/sg-0881df0029643816b" -> null
+      - description            = "Managed by Terraform" -> null
+      - egress                 = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = ""
+              - from_port        = 0
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "-1"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 0
+            },
+        ] -> null
+      - id                     = "sg-0881df0029643816b" -> null
+      - ingress                = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = ""
+              - from_port        = 0
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "-1"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 0
+            },
+        ] -> null
+      - name                   = "SG-eks-cluster" -> null
+      - owner_id               = "738782963780" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {} -> null
+      - tags_all               = {
+          - "Name"      = "udacity"
+          - "Terraform" = "true"
+        } -> null
+      - vpc_id                 = "vpc-050604a842317a128" -> null
+    }
+
+Plan: 0 to add, 0 to change, 23 to destroy.
+
+Changes to Outputs:
+  - account_id  = "738782963780" -> null
+  - caller_arn  = "arn:aws:iam::738782963780:user/admin" -> null
+  - caller_user = "AIDA2YAXFNBCKQ35UHEYW" -> null
+
+Do you really want to destroy all resources?
+  Terraform will destroy all your managed infrastructure, as shown above.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  Enter a value: yes
+
+kubernetes_namespace.udacity: Destroying... [id=udacity]
+kubernetes_service.grafana-external: Destroying... [id=monitoring/grafana-external]
+module.project_alb.aws_lb_target_group_attachment.udacity[2]: Destroying... [id=arn:aws:elasticloadbalancing:us-west-1:738782963780:targetgroup/udacity-lb-tg/4b95089d514211b5-2023120117304825440000000d]
+module.project_alb.aws_lb_target_group_attachment.udacity[1]: Destroying... [id=arn:aws:elasticloadbalancing:us-west-1:738782963780:targetgroup/udacity-lb-tg/4b95089d514211b5-2023120117304788970000000c]
+module.project_alb.aws_lb_target_group_attachment.udacity[0]: Destroying... [id=arn:aws:elasticloadbalancing:us-west-1:738782963780:targetgroup/udacity-lb-tg/4b95089d514211b5-2023120117304843980000000e]
+module.project_alb.aws_lb_listener.udacity: Destroying... [id=arn:aws:elasticloadbalancing:us-west-1:738782963780:listener/app/udacity-lb-tf/ba1551749185931f/a4ab0a1e851c072e]
+module.project_alb.aws_lb_target_group_attachment.udacity[0]: Destruction complete after 0s
+module.project_alb.aws_lb_target_group_attachment.udacity[1]: Destruction complete after 0s
+module.project_alb.aws_lb_target_group_attachment.udacity[2]: Destruction complete after 1s
+module.project_ec2.aws_instance.ubuntu[1]: Destroying... [id=i-01c4804370789911d]
+module.project_ec2.aws_instance.ubuntu[2]: Destroying... [id=i-0d23fa14e9383d06a]
+module.project_ec2.aws_instance.ubuntu[0]: Destroying... [id=i-0c5109defc4db7d85]
+module.project_alb.aws_lb_listener.udacity: Destruction complete after 1s
+module.project_alb.aws_lb.udacity: Destroying... [id=arn:aws:elasticloadbalancing:us-west-1:738782963780:loadbalancer/app/udacity-lb-tf/ba1551749185931f]
+module.project_alb.aws_lb_target_group.udacity: Destroying... [id=arn:aws:elasticloadbalancing:us-west-1:738782963780:targetgroup/udacity-lb-tg/4b95089d514211b5]
+module.project_alb.aws_lb_target_group.udacity: Destruction complete after 0s
+kubernetes_service.grafana-external: Destruction complete after 3s
+module.project_alb.aws_lb.udacity: Destruction complete after 2s
+kubernetes_namespace.udacity: Destruction complete after 9s
+module.project_eks.aws_iam_role_policy_attachment.node_CloudWatchAgentServerPolicy: Destroying... [id=app-udacity-eks-node-role-20231201173028874600000005]
+module.project_eks.aws_eks_node_group.node: Destroying... [id=udacity-cluster:app-udacity-node-group]
+module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSCloudwatchPolicy: Destroying... [id=app-udacity-eks-node-role-20231201173028863200000002]
+module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSCloudwatchPolicy: Destruction complete after 0s
+module.project_eks.aws_iam_role_policy_attachment.node_CloudWatchAgentServerPolicy: Destruction complete after 0s
+module.project_ec2.aws_instance.ubuntu[0]: Still destroying... [id=i-0c5109defc4db7d85, 10s elapsed]
+module.project_ec2.aws_instance.ubuntu[1]: Still destroying... [id=i-01c4804370789911d, 10s elapsed]
+module.project_ec2.aws_instance.ubuntu[2]: Still destroying... [id=i-0d23fa14e9383d06a, 10s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 10s elapsed]
+module.project_ec2.aws_instance.ubuntu[2]: Still destroying... [id=i-0d23fa14e9383d06a, 20s elapsed]
+module.project_ec2.aws_instance.ubuntu[1]: Still destroying... [id=i-01c4804370789911d, 20s elapsed]
+module.project_ec2.aws_instance.ubuntu[0]: Still destroying... [id=i-0c5109defc4db7d85, 20s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 20s elapsed]
+module.project_ec2.aws_instance.ubuntu[2]: Still destroying... [id=i-0d23fa14e9383d06a, 30s elapsed]
+module.project_ec2.aws_instance.ubuntu[0]: Still destroying... [id=i-0c5109defc4db7d85, 30s elapsed]
+module.project_ec2.aws_instance.ubuntu[1]: Still destroying... [id=i-01c4804370789911d, 30s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 30s elapsed]
+module.project_ec2.aws_instance.ubuntu[1]: Still destroying... [id=i-01c4804370789911d, 40s elapsed]
+module.project_ec2.aws_instance.ubuntu[2]: Still destroying... [id=i-0d23fa14e9383d06a, 40s elapsed]
+module.project_ec2.aws_instance.ubuntu[0]: Still destroying... [id=i-0c5109defc4db7d85, 40s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 40s elapsed]
+module.project_ec2.aws_instance.ubuntu[0]: Still destroying... [id=i-0c5109defc4db7d85, 50s elapsed]
+module.project_ec2.aws_instance.ubuntu[1]: Still destroying... [id=i-01c4804370789911d, 50s elapsed]
+module.project_ec2.aws_instance.ubuntu[2]: Still destroying... [id=i-0d23fa14e9383d06a, 50s elapsed]
+module.project_ec2.aws_instance.ubuntu[1]: Destruction complete after 52s
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 50s elapsed]
+module.project_ec2.aws_instance.ubuntu[0]: Still destroying... [id=i-0c5109defc4db7d85, 1m0s elapsed]
+module.project_ec2.aws_instance.ubuntu[2]: Still destroying... [id=i-0d23fa14e9383d06a, 1m0s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 1m0s elapsed]
+module.project_ec2.aws_instance.ubuntu[2]: Still destroying... [id=i-0d23fa14e9383d06a, 1m10s elapsed]
+module.project_ec2.aws_instance.ubuntu[0]: Still destroying... [id=i-0c5109defc4db7d85, 1m10s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 1m10s elapsed]
+module.project_ec2.aws_instance.ubuntu[0]: Still destroying... [id=i-0c5109defc4db7d85, 1m20s elapsed]
+module.project_ec2.aws_instance.ubuntu[2]: Still destroying... [id=i-0d23fa14e9383d06a, 1m20s elapsed]
+module.project_ec2.aws_instance.ubuntu[0]: Destruction complete after 1m23s
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 1m20s elapsed]
+module.project_ec2.aws_instance.ubuntu[2]: Still destroying... [id=i-0d23fa14e9383d06a, 1m30s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 1m30s elapsed]
+module.project_ec2.aws_instance.ubuntu[2]: Still destroying... [id=i-0d23fa14e9383d06a, 1m40s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 1m40s elapsed]
+module.project_ec2.aws_instance.ubuntu[2]: Still destroying... [id=i-0d23fa14e9383d06a, 1m50s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 1m50s elapsed]
+module.project_ec2.aws_instance.ubuntu[2]: Still destroying... [id=i-0d23fa14e9383d06a, 2m0s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 2m0s elapsed]
+module.project_ec2.aws_instance.ubuntu[2]: Still destroying... [id=i-0d23fa14e9383d06a, 2m10s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 2m10s elapsed]
+module.project_ec2.aws_instance.ubuntu[2]: Still destroying... [id=i-0d23fa14e9383d06a, 2m20s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 2m20s elapsed]
+module.project_ec2.aws_instance.ubuntu[2]: Still destroying... [id=i-0d23fa14e9383d06a, 2m30s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 2m30s elapsed]
+module.project_ec2.aws_instance.ubuntu[2]: Still destroying... [id=i-0d23fa14e9383d06a, 2m40s elapsed]
+module.project_ec2.aws_instance.ubuntu[2]: Destruction complete after 2m45s
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 2m40s elapsed]
+module.project_ec2.aws_security_group.ec2_sg: Destroying... [id=sg-0f181054b7ac3d00b]
+module.project_ec2.aws_security_group.ec2_sg: Destruction complete after 1s
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 2m50s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 3m0s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 3m10s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 3m20s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 3m30s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 3m40s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 3m50s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 4m0s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 4m10s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 4m20s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 4m30s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 4m40s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 4m50s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 5m0s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 5m10s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 5m20s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 5m30s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 5m40s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 5m50s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 6m0s elapsed]
+module.project_eks.aws_eks_node_group.node: Still destroying... [id=udacity-cluster:app-udacity-node-group, 6m10s elapsed]
+module.project_eks.aws_eks_node_group.node: Destruction complete after 6m17s
+module.project_eks.aws_iam_role_policy_attachment.node_harmony_policy_attachment: Destroying... [id=app-udacity-eks-node-role-20231201173029147500000008]
+module.project_eks.aws_iam_role_policy_attachment.node_AmazonEKS_CNI_Policy: Destroying... [id=app-udacity-eks-node-role-20231201173028851300000001]
+module.project_eks.aws_iam_role_policy_attachment.node_AmazonEC2ContainerRegistryReadOnly: Destroying... [id=app-udacity-eks-node-role-20231201173028897400000007]
+module.project_eks.aws_iam_role_policy_attachment.node_AmazonEKSWorkerNodePolicy: Destroying... [id=app-udacity-eks-node-role-20231201173028879600000006]
+module.project_eks.aws_eks_cluster.cluster: Destroying... [id=udacity-cluster]
+module.project_eks.aws_iam_role_policy_attachment.node_AmazonEKSWorkerNodePolicy: Destruction complete after 1s
+module.project_eks.aws_iam_role_policy_attachment.node_AmazonEC2ContainerRegistryReadOnly: Destruction complete after 1s
+module.project_eks.aws_iam_role_policy_attachment.node_AmazonEKS_CNI_Policy: Destruction complete after 1s
+module.project_eks.aws_iam_role_policy_attachment.node_harmony_policy_attachment: Destruction complete after 1s
+module.project_eks.aws_eks_cluster.cluster: Still destroying... [id=udacity-cluster, 10s elapsed]
+module.project_eks.aws_eks_cluster.cluster: Still destroying... [id=udacity-cluster, 20s elapsed]
+module.project_eks.aws_eks_cluster.cluster: Still destroying... [id=udacity-cluster, 30s elapsed]
+module.project_eks.aws_eks_cluster.cluster: Still destroying... [id=udacity-cluster, 40s elapsed]
+module.project_eks.aws_eks_cluster.cluster: Still destroying... [id=udacity-cluster, 50s elapsed]
+module.project_eks.aws_eks_cluster.cluster: Still destroying... [id=udacity-cluster, 1m0s elapsed]
+module.project_eks.aws_eks_cluster.cluster: Still destroying... [id=udacity-cluster, 1m10s elapsed]
+module.project_eks.aws_eks_cluster.cluster: Still destroying... [id=udacity-cluster, 1m20s elapsed]
+module.project_eks.aws_eks_cluster.cluster: Destruction complete after 1m25s
+module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSServicePolicy: Destroying... [id=app-udacity-eks-cluster-role-20231201173028868400000003]
+module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSClusterPolicy: Destroying... [id=app-udacity-eks-cluster-role-20231201173028868500000004]
+module.project_eks.aws_security_group.eks-cluster: Destroying... [id=sg-0881df0029643816b]
+module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSServicePolicy: Destruction complete after 1s
+module.project_eks.aws_iam_role_policy_attachment.cluster_AmazonEKSClusterPolicy: Destruction complete after 1s
+module.project_eks.aws_security_group.eks-cluster: Destruction complete after 2s
+
+Destroy complete! Resources: 23 destroyed.
