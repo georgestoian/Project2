@@ -27,4 +27,4 @@ Comment: Why is this not correct? It is literraly the same query as in the cours
 ### The error budget is 20%
 (1 - (sum (rate(apiserver_request_total{job="apiserver",code=~"2.."}[2d])) / sum (rate(apiserver_request_total{job="apiserver"}[2d])))) * 100 
 
-Corrected formula:1 - ((1 - (sum(increase(apiserver_request_total{job="apiserver", code="200"}[7d])) by (verb)) / sum(increase(apiserver_request_total{job="apiserver"}[7d])) by (verb)) / (1 - .90))
+Corrected formula:1 - ((1 - (sum(increase(apiserver_request_total{job="apiserver", code="200"}[7d])) by (verb)) / sum(increase(apiserver_request_total{job="apiserver"}[7d])) by (verb)) / (1 - .80))
